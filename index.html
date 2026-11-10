@@ -135,8 +135,37 @@
     }
 
     h2 {
-      font-size: clamp(28px, 5.6vw, 42px);
+      font-size: clamp(32px, 6.6vw, 50px);
+      line-height: 1.08;
       margin-bottom: 14px
+    }
+
+    /* cabeçalho padrão das seções */
+    .sec-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px
+    }
+
+    .sec-head.left {
+      text-align: left;
+      margin-left: 0
+    }
+
+    .sec-head .sub {
+      max-width: 560px;
+      margin: 0 auto
+    }
+
+    .sec-head.left .sub {
+      margin-left: 0
+    }
+
+    .eyebrow {
+      background: var(--white);
+      border: 2px solid var(--pink);
+      font-weight: 600;
+      letter-spacing: .02em
     }
 
     h3 {
@@ -333,10 +362,10 @@
     .fan .bm {
       position: absolute;
       bottom: 18px;
-      width: 23%;
+      width: 21%;
       aspect-ratio: 1/2;
       border-radius: 12px;
-      border: 5px solid #fff;
+      border: 4px solid #fff;
       box-shadow: 0 12px 24px rgba(120, 60, 80, .20);
       overflow: visible;
       background: #fff
@@ -351,47 +380,50 @@
 
     .fan .b1 {
       left: -1%;
-      transform: rotate(-14deg);
-      bottom: 4px
+      transform: rotate(-15deg);
+      bottom: 0
     }
 
     .fan .b2 {
-      left: 17%;
-      transform: rotate(-6deg);
-      bottom: 22px
+      left: 12.5%;
+      transform: rotate(-10deg);
+      bottom: 14px;
+      z-index: 1
     }
 
     .fan .b3 {
-      left: 38.5%;
-      transform: rotate(0deg);
-      bottom: 34px;
-      z-index: 3
+      left: 26%;
+      transform: rotate(-5deg);
+      bottom: 26px;
+      z-index: 2
     }
 
     .fan .b4 {
-      left: 60%;
-      transform: rotate(7deg);
-      bottom: 22px;
-      z-index: 2
+      left: 39.5%;
+      transform: rotate(0deg);
+      bottom: 34px;
+      z-index: 4
     }
 
     .fan .b5 {
-      left: 78%;
-      transform: rotate(14deg);
-      bottom: 4px
+      left: 53%;
+      transform: rotate(5deg);
+      bottom: 26px;
+      z-index: 3
     }
 
-    .tape {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      width: 58%;
-      height: 20px;
-      transform: translateX(-50%) rotate(-4deg);
-      background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .55) 0 6px, rgba(255, 255, 255, 0) 6px 12px), var(--tc, #F7B9C8);
-      opacity: .9;
-      border-radius: 2px;
+    .fan .b6 {
+      left: 66.5%;
+      transform: rotate(10deg);
+      bottom: 14px;
       z-index: 2
+    }
+
+    .fan .b7 {
+      left: 80%;
+      transform: rotate(15deg);
+      bottom: 0;
+      z-index: 1
     }
 
     .sticker {
@@ -452,66 +484,6 @@
       color: var(--rose)
     }
 
-    /* números */
-    .nums {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: -6px
-    }
-
-    .num {
-      border-radius: 18px;
-      padding: 18px 10px;
-      text-align: center
-    }
-
-    .num b {
-      display: block;
-      font-family: 'Fredoka';
-      font-weight: 600;
-      font-size: 34px;
-      line-height: 1
-    }
-
-    .num span {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--soft)
-    }
-
-    .n1 {
-      background: var(--blush)
-    }
-
-    .n1 b {
-      color: var(--rose)
-    }
-
-    .n2 {
-      background: var(--lilac)
-    }
-
-    .n2 b {
-      color: var(--lilac-d)
-    }
-
-    .n3 {
-      background: var(--mint)
-    }
-
-    .n3 b {
-      color: var(--mint-d)
-    }
-
-    .n4 {
-      background: var(--butter)
-    }
-
-    .n4 b {
-      color: var(--butter-d)
-    }
-
     /* o que vem */
     .anatomy {
       display: grid;
@@ -542,79 +514,75 @@
       color: #fff
     }
 
-    .feat {
-      list-style: none;
+    /* o que vem em cada kit */
+    .kit {
       display: grid;
-      gap: 12px;
-      margin-top: 18px
+      gap: 26px;
+      align-items: center
     }
 
-    .feat li {
-      background: #fff;
-      border-radius: 18px;
-      padding: 16px 18px;
-      border-left: 6px solid var(--fc, var(--pink))
-    }
-
-    .feat b {
-      display: block;
-      font-family: 'Fredoka';
-      font-weight: 600;
-      font-size: 19px;
-      margin-bottom: 2px
-    }
-
-    .feat span {
-      font-size: 16px;
-      color: var(--soft)
-    }
-
-
-    /* fluxo imprime -> montado */
-    .flow {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      align-items: center;
-      margin: 30px auto 0;
-      max-width: 900px
-    }
-
-    .fstep {
+    .kit-text {
       text-align: center
     }
 
-    .fimg {
+    .kit-text .sub {
+      max-width: 480px;
+      margin: 0 auto
+    }
+
+    .kit .sec-head {
+      margin-bottom: 0
+    }
+
+    .kit-img {
+      background: #fff;
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(120, 60, 80, .12);
+      max-width: 320px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .kit-img img {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .kit-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto
+    }
+
+    .kit-list li {
       display: flex;
       align-items: center;
-      justify-content: center
-    }
-
-    .fimg img {
-      max-height: 360px;
-      width: auto
-    }
-
-    .sheetimg {
+      gap: 16px;
       background: #fff;
       border-radius: 18px;
-      padding: 10px;
-      box-shadow: 0 10px 26px rgba(120, 60, 80, .12)
+      padding: 14px 18px
     }
 
-    .sheetimg img {
-      border-radius: 10px;
-      max-height: none;
-      width: 100%
+    .kn {
+      flex: none;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--blush);
+      color: var(--rose);
+      font-family: 'Fredoka';
+      font-weight: 600;
+      font-size: 26px
     }
 
-    .fstep figcaption {
-      margin-top: 12px;
-      color: var(--soft);
-      font-size: 15px
-    }
-
-    .fstep figcaption b {
+    .kit-list b {
       display: block;
       font-family: 'Fredoka';
       font-weight: 600;
@@ -622,95 +590,341 @@
       color: var(--ink)
     }
 
-    .arrow {
-      width: 52px;
-      margin: 0 auto;
-      transform: rotate(90deg)
-    }
-
-    .feat3 {
-      margin-top: 34px
+    .kit-list span:not(.kn) {
+      font-size: 16px;
+      color: var(--soft)
     }
 
     /* galeria */
+    /* carrossel de páginas (coverflow) */
+    .cf {
+      --w: min(80vw, 540px);
+      position: relative;
+      margin: 0 -20px;
+      padding: 10px 0 18px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent)
+    }
+
+    .cf::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      width: min(120vw, 900px);
+      height: 70%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(closest-side, rgba(255, 255, 255, .85), rgba(255, 255, 255, 0));
+      pointer-events: none
+    }
+
+    .cf-stage {
+      position: relative;
+      height: calc(var(--w) * .707 + 56px);
+      perspective: 1400px;
+      touch-action: pan-y;
+      cursor: grab;
+      outline: none
+    }
+
+    .cf-stage:active {
+      cursor: grabbing
+    }
+
+    .cf-slide {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      width: var(--w);
+      margin-left: calc(var(--w) / -2);
+      background: #fff;
+      border-radius: 16px;
+      padding: 7px;
+      box-shadow: 0 18px 40px rgba(90, 60, 140, .16);
+      transition: transform .75s cubic-bezier(.22, .8, .24, 1), opacity .75s ease, filter .75s ease, box-shadow .75s ease;
+      will-change: transform;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    .cf-slide.on {
+      box-shadow: 0 26px 60px rgba(90, 60, 140, .26)
+    }
+
+    .cf-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0
+    }
+
+    .cf-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none
+    }
+
+    .cf-cap {
+      position: relative;
+      text-align: center;
+      font-family: 'Fredoka';
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--ink);
+      height: 28px;
+      margin-top: 6px
+    }
+
+    .cf-cap span {
+      display: inline-block;
+      transition: opacity .35s ease, transform .35s ease
+    }
+
+    .cf-cap span.out {
+      opacity: 0;
+      transform: translateY(6px)
+    }
+
+    .cf-nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 14px
+    }
+
+    .cf-btn {
+      flex: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 0;
+      background: #fff;
+      color: var(--rose);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(90, 60, 140, .14);
+      transition: transform .2s ease, box-shadow .2s ease
+    }
+
+    .cf-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(90, 60, 140, .2)
+    }
+
+    .cf-btn:focus-visible,
+    .cf-dot:focus-visible {
+      outline: 3px solid var(--pink);
+      outline-offset: 2px
+    }
+
+    .cf-btn svg {
+      width: 20px;
+      height: 20px
+    }
+
+    .cf-dots {
+      display: flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .cf-dot {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(143, 120, 207, .3);
+      overflow: hidden;
+      cursor: pointer;
+      transition: width .4s ease, background .4s ease
+    }
+
+    .cf-dot.on {
+      width: 34px;
+      background: rgba(214, 82, 122, .22)
+    }
+
+    .cf-dot i {
+      position: absolute;
+      inset: 0;
+      width: 0;
+      background: var(--rose);
+      border-radius: inherit
+    }
+
+    .cf-dot.on i {
+      animation: cfFill var(--cf-t, 4s) linear forwards
+    }
+
+    .cf.paused .cf-dot.on i {
+      animation-play-state: paused
+    }
+
+    .cf.static .cf-dot.on i {
+      animation: none;
+      width: 100%
+    }
+
+    @keyframes cfFill {
+      to {
+        width: 100%
+      }
+    }
+
+    .sheets-note {
+      text-align: center;
+      font-size: 14px;
+      color: var(--soft);
+      margin: 16px 0 0
+    }
+
     .gallery {
       background: var(--lilac)
     }
 
-    .shelf {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 46%;
-      gap: 18px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      padding: 26px 20px 14px;
-      margin: 20px -20px 0;
-      scrollbar-width: none
+    /* para quem é: livro aberto (presentear | vender) */
+    .uses {
+      background: var(--mint)
     }
 
-    .shelf::-webkit-scrollbar {
-      display: none
+    .book {
+      position: relative;
+      max-width: 1000px;
+      margin: 110px auto 0;
+      display: grid
     }
 
-    .shelf figure {
-      scroll-snap-align: center;
-      position: relative
+    .marks {
+      position: absolute;
+      z-index: 0;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start
     }
 
-    .shelf .card {
-      background: #fff;
-      border-radius: 14px;
-      padding: 7px;
-      box-shadow: 0 10px 22px rgba(90, 60, 140, .16);
-      position: relative
+    .mk {
+      position: relative;
+      width: 50px;
+      aspect-ratio: 2/5;
+      transition: transform .45s cubic-bezier(.3, 1.4, .5, 1);
+      transform-origin: 50% 100%
     }
 
-    .shelf .card img {
-      border-radius: 9px;
-      aspect-ratio: 1/2;
-      object-fit: cover;
-      width: 100%
+    .mk:nth-child(2) {
+      margin-top: -18px
     }
 
-    .shelf figure:nth-child(odd) .card {
-      transform: rotate(-2deg)
+    .mk:nth-child(3) {
+      margin-top: 10px
     }
 
-    .shelf figure:nth-child(even) .card {
-      transform: rotate(2deg)
-    }
-
-    .shelf figcaption {
-      text-align: center;
-      font-family: 'Fredoka';
-      font-weight: 500;
-      font-size: 16px;
-      margin-top: 14px
-    }
-
-    .more {
+    .mk img {
       display: block;
-      text-align: center;
-      font-weight: 700;
-      color: var(--lilac-d);
-      margin-top: 16px
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      border-radius: 6px 6px 0 0;
+      background: #fff;
+      box-shadow: 0 -4px 14px rgba(40, 90, 70, .16)
     }
 
-    /* para quem */
+    .mk .hole {
+      position: absolute;
+      top: 11px;
+      left: 50%;
+      width: 9px;
+      height: 9px;
+      margin-left: -4.5px;
+      border-radius: 50%;
+      background: var(--mint);
+      box-shadow: inset 0 1.5px 2px rgba(40, 60, 50, .35), 0 0 0 2px rgba(255, 255, 255, .9)
+    }
+
+    .mk .cord {
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% - 16px);
+      width: 30px;
+      height: 34px;
+      margin-left: -5px;
+      overflow: visible;
+      color: var(--cc, var(--rose));
+      opacity: .55;
+      pointer-events: none
+    }
+
+    .book:hover .mk:nth-child(1) {
+      transform: translateY(-8px) rotate(-3deg)
+    }
+
+    .book:hover .mk:nth-child(2) {
+      transform: translateY(-12px)
+    }
+
+    .book:hover .mk:nth-child(3) {
+      transform: translateY(-6px) rotate(3deg)
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 36px 24px 38px;
+      background: #FFFDFB;
+      box-shadow: 0 3px 0 -1px #F3E9EC, 0 6px 0 -2px #EADCE2, 0 22px 40px rgba(40, 90, 70, .14)
+    }
+
+    .pg-gift {
+      border-radius: 24px 24px 6px 6px;
+      background: linear-gradient(to bottom, #FFFDFB 80%, #F6ECEF)
+    }
+
+    .pg-sell {
+      border-radius: 6px 6px 24px 24px;
+      background: linear-gradient(to top, #FFFDFB 80%, #F6ECEF);
+      border-top: 1px solid #EEDFE5
+    }
+
+    .page h3 {
+      font-size: clamp(26px, 5vw, 32px);
+      color: var(--ink);
+      margin-bottom: 6px
+    }
+
+    .page>p {
+      color: var(--soft);
+      font-size: 17px;
+      max-width: 42ch
+    }
+
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 26px
+      gap: 10px;
+      margin-top: 22px
     }
 
     .tags span {
       font-family: 'Fredoka';
       font-weight: 500;
-      font-size: 18px;
-      padding: 12px 22px;
+      font-size: 15px;
+      padding: 7px 14px;
       border-radius: 999px
     }
 
@@ -734,58 +948,33 @@
       color: #8E6A0F
     }
 
-    /* vender */
-    .sell {
-      background: var(--mint)
+    .gift-tip {
+      margin-top: auto;
+      max-width: 400px;
+      background: var(--butter);
+      color: #6E5410;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 16px 20px;
+      border-radius: 4px 16px 16px 16px;
+      transform: rotate(-1.2deg);
+      box-shadow: 0 6px 14px rgba(185, 138, 22, .12)
     }
 
-    .sell .box {
-      display: grid;
-      gap: 34px;
-      align-items: center
+    .gift-tip b {
+      font-family: 'Fredoka';
+      font-weight: 600
     }
 
-    .trio {
-      display: flex;
-      justify-content: center;
-      padding: 20px 0
-    }
-
-    .trio .bm {
-      width: 30%;
-      max-width: 150px;
-      border-radius: 12px;
-      border: 5px solid #fff;
-      box-shadow: 0 12px 24px rgba(40, 90, 70, .18);
-      position: relative;
-      background: #fff
-    }
-
-    .trio .bm img {
-      border-radius: 7px;
-      aspect-ratio: 1/2;
-      object-fit: cover;
-      width: 100%
-    }
-
-    .trio .bm:nth-child(1) {
-      transform: rotate(-8deg) translateX(16px)
-    }
-
-    .trio .bm:nth-child(2) {
-      transform: translateY(-16px);
-      z-index: 2
-    }
-
-    .trio .bm:nth-child(3) {
-      transform: rotate(8deg) translateX(-16px)
+    .pg-gift .tags {
+      margin-bottom: 28px
     }
 
     .checks {
       list-style: none;
       display: grid;
       gap: 12px;
-      margin: 20px 0 28px
+      margin: 22px 0 28px
     }
 
     .checks li {
@@ -801,7 +990,178 @@
       height: 24px;
       border-radius: 50%;
       margin-top: 2px;
-      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234E9C80' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/15px no-repeat
+      background: var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234E9C80' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/15px no-repeat
+    }
+
+    .tabs,
+    .turn {
+      display: none
+    }
+
+    /* celular: uma página por vez, fitas viram abas */
+    @media (max-width: 799px) {
+      .marks {
+        display: none
+      }
+
+      .book {
+        margin-top: 70px;
+        perspective: 1600px
+      }
+
+      .page {
+        grid-area: 1 / 1;
+        padding: 34px 24px 84px 30px;
+        border-radius: 6px 22px 22px 6px;
+        border-top: 0;
+        background: linear-gradient(to right, #EFE1E7, #FFFDFB 26px);
+        box-shadow: 3px 0 0 -1px #F3E9EC, 6px 0 0 -2px #EADCE2, 0 22px 40px rgba(40, 90, 70, .14);
+        transform-origin: left center;
+        backface-visibility: hidden;
+        transition: transform .7s cubic-bezier(.45, .05, .25, 1), opacity .7s ease
+      }
+
+      .page.top {
+        z-index: 3
+      }
+
+      .page.flipped {
+        transform: rotateY(-82deg);
+        opacity: 0
+      }
+
+      .page.hide {
+        visibility: hidden
+      }
+
+      .page.noanim {
+        transition: none
+      }
+
+      .tabs {
+        position: absolute;
+        z-index: 0;
+        top: -50px;
+        left: 34px;
+        display: flex;
+        gap: 8px
+      }
+
+      .tab {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 116px;
+        height: 76px;
+        padding: 13px 0 0;
+        line-height: 1.2;
+        border: 0;
+        border-radius: 10px 10px 0 0;
+        font-family: 'Fredoka';
+        font-weight: 600;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        outline: 1.5px dashed rgba(255, 255, 255, .55);
+        outline-offset: -6px;
+        transform: translateY(14px);
+        opacity: .6;
+        transition: transform .4s cubic-bezier(.3, 1.4, .5, 1), opacity .3s ease;
+        -webkit-tap-highlight-color: transparent
+      }
+
+      .tab-gift {
+        background: var(--rose)
+      }
+
+      .tab-sell {
+        background: var(--mint-d)
+      }
+
+      .tab[aria-selected="true"] {
+        transform: none;
+        opacity: 1
+      }
+
+      .tab:active {
+        transform: translateY(4px)
+      }
+
+      .tab[aria-selected="true"]:active {
+        transform: translateY(-8px)
+      }
+
+      @media (hover: hover) {
+        .tab:hover {
+          transform: translateY(4px);
+          opacity: .85
+        }
+
+        .tab[aria-selected="true"]:hover {
+          transform: translateY(-8px);
+          opacity: 1
+        }
+      }
+
+      .tab:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 2px
+      }
+
+      .gift-tip {
+        margin-top: 0
+      }
+
+      .turn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        min-height: 58px;
+        padding: 0 62px 0 20px;
+        border: 0;
+        background: none;
+        font-family: 'Fredoka';
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--rose);
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent
+      }
+
+      .turn::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 46px;
+        height: 46px;
+        border-radius: 0 0 22px 0;
+        background: linear-gradient(315deg, var(--mint) 0 50%, #EAD9DF 50% 56%, #F6ECEF 56%);
+        box-shadow: -3px -3px 8px rgba(120, 60, 80, .08);
+        transition: width .3s ease, height .3s ease
+      }
+
+      .turn:active::after {
+        width: 58px;
+        height: 58px
+      }
+
+      .turn:focus-visible {
+        outline: 3px solid var(--pink);
+        outline-offset: -4px;
+        border-radius: 12px
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .mk,
+      .page,
+      .tab {
+        transition: none !important
+      }
     }
 
     /* como funciona */
@@ -1045,20 +1405,26 @@
 
     /* garantia */
     .guar {
-      display: grid;
-      gap: 20px;
-      align-items: center;
       background: #fff;
       border-radius: var(--r);
-      padding: 28px 24px;
-      max-width: 820px;
-      margin: 0 auto;
-      border: 2px dashed var(--pink)
+      padding: 20px;
+      max-width: 880px;
+      margin: 0 auto 64px;
+      border: 2px solid var(--line);
+      box-shadow: 0 10px 26px rgba(120, 60, 80, .08)
+    }
+
+    .guar-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px
     }
 
     .seal {
-      width: 118px;
-      height: 118px;
+      flex: none;
+      width: 66px;
+      height: 66px;
       border-radius: 50%;
       background: var(--mint);
       color: var(--mint-d);
@@ -1066,18 +1432,131 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 auto;
       font-family: 'Fredoka';
-      font-weight: 600
+      font-weight: 600;
+      box-shadow: 0 0 0 5px #fff, 0 0 0 7px var(--mint)
     }
 
     .seal b {
-      font-size: 48px;
+      font-size: 30px;
       line-height: 1
     }
 
     .seal span {
-      font-size: 16px
+      font-size: 13px
+    }
+
+    .guar h3 {
+      font-size: 20px;
+      line-height: 1.2
+    }
+
+    .guar p {
+      color: var(--soft);
+      font-size: 15px;
+      line-height: 1.55
+    }
+
+    .plans-trust {
+      margin-top: 26px
+    }
+
+    /* depoimentos */
+    .talk {
+      background: var(--lilac)
+    }
+
+    .dp {
+      --dw: min(76vw, 300px)
+    }
+
+    .dp-track {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 8px calc(50% + 20px - var(--dw) / 2) 28px;
+      margin: 0 -20px;
+      scrollbar-width: none;
+      outline: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)
+    }
+
+    .dp-track::-webkit-scrollbar {
+      display: none
+    }
+
+    .dp-track:focus-visible {
+      outline: 3px solid var(--pink);
+      outline-offset: -3px;
+      border-radius: 16px
+    }
+
+    .dp-item {
+      flex: 0 0 var(--dw);
+      scroll-snap-align: center;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+      border: 5px solid #fff;
+      box-shadow: 0 14px 30px rgba(90, 60, 140, .14);
+      transform: scale(.9);
+      opacity: .5;
+      cursor: pointer;
+      transition: transform .45s cubic-bezier(.22, .8, .24, 1), opacity .45s ease
+    }
+
+    .dp-item.on {
+      transform: none;
+      opacity: 1;
+      cursor: default
+    }
+
+    .dp-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 17px;
+      pointer-events: none
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dp-item {
+        transition: none
+      }
+    }
+
+    .dp-dots {
+      display: flex;
+      gap: 7px
+    }
+
+    .dp .cf-btn:disabled {
+      opacity: .4;
+      cursor: default;
+      transform: none
+    }
+
+    .dp-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(143, 120, 207, .3);
+      cursor: pointer;
+      transition: width .3s ease, background .3s ease
+    }
+
+    .dp-dot.on {
+      width: 24px;
+      background: var(--rose)
+    }
+
+    .dp-dot:focus-visible {
+      outline: 3px solid var(--pink);
+      outline-offset: 2px
     }
 
     /* faq */
@@ -1137,9 +1616,15 @@
     }
 
     /* final */
-    .final {
+    section.final {
       background: var(--rose);
-      color: #fff
+      color: #fff;
+      padding: 48px 0
+    }
+
+    .final h2 {
+      font-size: clamp(28px, 5vw, 38px);
+      margin-bottom: 8px
     }
 
     .final h2 {
@@ -1165,52 +1650,13 @@
     }
 
     footer {
-      padding: 30px 0 100px;
+      padding: 16px 0;
       text-align: center;
-      font-size: 14px;
-      color: var(--soft)
-    }
-
-    /* barra fixa mobile */
-    .sticky {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #fff;
-      border-top: 2px solid var(--line);
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 50;
-      transform: translateY(110%);
-      transition: transform .25s
-    }
-
-    .sticky.show {
-      transform: none
-    }
-
-    .sticky .p {
       font-size: 13px;
-      line-height: 1.2;
-      color: var(--soft)
-    }
-
-    .sticky .p b {
-      display: block;
-      font-family: 'Fredoka';
-      font-weight: 600;
-      font-size: 20px;
-      color: var(--rose)
-    }
-
-    .sticky .btn {
-      flex: 1;
-      padding: 13px 16px;
-      font-size: 18px;
-      box-shadow: 0 4px 0 var(--rose-d)
+      line-height: 1.5;
+      background: var(--rose);
+      color: #F9D3DE;
+      border-top: 1px solid rgba(255, 255, 255, .16)
     }
 
     @media(min-width:800px) {
@@ -1219,77 +1665,117 @@
       }
 
       .hero {
-        padding: 56px 0 96px
+        padding: 36px 0 80px
       }
 
       .hero-grid {
-        grid-template-areas: "head art" "body art";
-        grid-template-columns: 1fr 1fr;
-        column-gap: 40px;
-        align-items: center
-      }
-
-      .hero-head,
-      .hero-body {
-        text-align: left
-      }
-
-      .hero-body p,
-      .tag {
-        margin-left: 0
-      }
-
-      .hero .trust {
-        justify-content: flex-start
-      }
-
-      .hero-head {
-        align-self: end
-      }
-
-      .hero-body {
-        align-self: start
+        gap: 18px
       }
 
       .fan {
-        height: 400px;
-        max-width: 540px
+        height: 340px;
+        width: 100%;
+        max-width: 680px
+      }
+
+      .price-tag {
+        left: 0;
+        top: 10px;
+        font-size: 16px;
+        padding: 10px 18px
+      }
+
+      .st1 {
+        right: 0;
+        top: 0
       }
 
       .hero h1 {
-        font-size: 68px
+        font-size: clamp(64px, 6vw, 88px);
+        margin-bottom: 16px
       }
 
-      .nums {
-        grid-template-columns: repeat(4, 1fr)
+      .tag {
+        font-size: 23px;
+        max-width: 760px
       }
 
-      .flow {
-        grid-template-columns: 1.25fr 60px 1fr;
-        gap: 20px
+      .hero-body p {
+        font-size: 19px;
+        max-width: 600px
       }
 
-      .arrow {
-        transform: none
+      .kit {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "img text" "img list";
+        column-gap: 64px;
+        row-gap: 24px;
+        max-width: 960px;
+        margin: 0 auto
       }
 
-      .fimg img {
-        max-height: 430px
+      .kit-img {
+        grid-area: img;
+        max-width: 440px
       }
 
-      .feat3 {
-        grid-template-columns: repeat(3, 1fr)
+      .kit-text {
+        grid-area: text;
+        text-align: left;
+        align-self: end
       }
 
-      .shelf {
-        grid-auto-columns: 1fr;
-        overflow: visible;
-        margin: 24px 0 0;
-        padding: 26px 0 10px
+      .kit-text .sub {
+        margin: 0
       }
 
-      .sell .box {
-        grid-template-columns: 1fr 1fr
+      .kit-list {
+        grid-area: list;
+        align-self: start;
+        margin: 0
+      }
+
+      .book {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 156px
+      }
+
+      .marks {
+        top: -104px;
+        gap: 14px
+      }
+
+      .mk {
+        width: 58px
+      }
+
+      .page {
+        padding: 50px 52px 54px
+      }
+
+      .tags span {
+        font-size: 17px;
+        padding: 9px 18px
+      }
+
+      .pg-gift {
+        border-radius: 26px 4px 4px 26px;
+        background: linear-gradient(to right, #FFFDFB 78%, #F3E6EB)
+      }
+
+      .pg-sell {
+        border-radius: 4px 26px 26px 4px;
+        background: linear-gradient(to left, #FFFDFB 78%, #F3E6EB);
+        border-top: 0;
+        border-left: 1px solid #EADBE1
+      }
+
+      footer {
+        padding: 18px 0
+      }
+
+      section.final {
+        padding: 64px 0
       }
 
       .how {
@@ -1316,15 +1802,73 @@
       }
 
       .guar {
-        grid-template-columns: 150px 1fr
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "seal title" "seal text";
+        column-gap: 26px;
+        row-gap: 4px;
+        padding: 24px 32px
       }
 
-      .sticky {
-        display: none
+      .guar-head {
+        display: contents
       }
 
-      footer {
-        padding-bottom: 40px
+      .dp {
+        --dw: 330px
+      }
+
+      .dp-track {
+        gap: 28px
+      }
+
+      .seal {
+        grid-area: seal;
+        align-self: center
+      }
+
+      .guar h3 {
+        grid-area: title;
+        align-self: end
+      }
+
+      .guar p {
+        grid-area: text;
+        align-self: start
+      }
+
+      .seal {
+        width: 92px;
+        height: 92px
+      }
+
+      .seal b {
+        font-size: 40px
+      }
+
+      .guar h3 {
+        font-size: 22px
+      }
+
+
+    }
+
+    @media(min-width:1100px) {
+      .hero .price-tag {
+        left: -27%;
+        top: 110px;
+        font-size: 17px;
+        padding: 12px 20px
+      }
+
+      .hero .price-tag b {
+        font-size: 28px
+      }
+
+      .hero .st1 {
+        right: -24%;
+        top: 70px;
+        transform: scale(1.15) rotate(-10deg)
       }
     }
   </style>
@@ -1339,7 +1883,7 @@
     <div class="wrap hero-grid">
       <div class="hero-head">
         <span class="pill">102 modelos prontos para imprimir</span>
-        <h1>Kit <span class="hl">Trios</span> de <span style="white-space:nowrap">Marca-Páginas</span></h1>
+        <h1>Kit <span class="hl">Trios</span> de<br><span style="white-space:nowrap">Marca-Páginas</span></h1>
         <p class="tag">Lindos, práticos e perfeitos para encantar e organizar cada leitura!</p>
       </div>
 
@@ -1347,13 +1891,15 @@
         <div class="fan" aria-hidden="true">
           <div class="price-tag">a partir de<b>R$ 9,90</b></div>
           <div class="sticker st1"><b>102</b><span>modelos</span></div>
-          <div class="bm b1"><img src="img/f-cereja.webp" alt="" width="400" height="800" fetchpriority="high"></div>
-          <div class="bm b2"><img src="img/f-gatos.webp" alt="" width="400" height="800" fetchpriority="high"></div>
-          <div class="bm b3"><span class="tape" style="--tc:#F7B9C8"></span><img src="img/f-maria.webp" alt=""
-              width="400" height="800" fetchpriority="high"></div>
-          <div class="bm b4"><span class="tape" style="--tc:#CBB9F0"></span><img src="img/f-panda.webp" alt=""
-              width="400" height="800" fetchpriority="high"></div>
-          <div class="bm b5"><img src="img/f-flores.webp" alt="" width="400" height="800" fetchpriority="high"></div>
+          <div class="bm b1"><img src="img/d-garfield.webp" alt="" width="400" height="800" fetchpriority="high"></div>
+          <div class="bm b2"><img src="img/d-snoopy.webp" alt="" width="400" height="800" fetchpriority="high"></div>
+          <div class="bm b3"><img src="img/d-looney.webp" alt="" width="400" height="800" fetchpriority="high"></div>
+          <div class="bm b4"><img src="img/d-stitch.webp" alt="" width="400" height="800" fetchpriority="high"></div>
+          <div class="bm b5"><img src="img/d-pooh.webp" alt="" width="400" height="800" fetchpriority="high"></div>
+          <div class="bm b6"><img src="img/d-hellokitty.webp" alt="" width="400" height="800" fetchpriority="high">
+          </div>
+          <div class="bm b7"><img src="img/d-bobesponja.webp" alt="" width="400" height="800" fetchpriority="high">
+          </div>
         </div>
       </div>
 
@@ -1367,124 +1913,145 @@
   </header>
   <div class="scallop"></div>
 
-  <!-- ================= NÚMEROS ================= -->
-  <div class="wrap" style="padding-top:34px">
-    <div class="nums">
-      <div class="num n1"><b>102</b><span>marca-páginas diferentes</span></div>
-      <div class="num n2"><b>34</b><span>kits com 3 marca-páginas</span></div>
-      <div class="num n3"><b>34</b><span>bases combinando</span></div>
-      <div class="num n4"><b>A4</b><span>pronto para imprimir</span></div>
-    </div>
-  </div>
-
   <!-- ================= O QUE VEM ================= -->
   <section>
-    <div class="wrap">
-      <div class="center mx">
-        <span class="pill" style="background:var(--blush)">O que vem em cada página</span>
-        <h2>1 kit completo por folha: <span class="hl">3 marca-páginas + 1 base</span></h2>
-        <p class="sub">Você imprime a folha, corta, dobra e monta. A base é a cartela de apresentação: os 3
-          marca-páginas ficam sobre ela, prontos para presentear ou vender.</p>
+    <div class="wrap kit">
+      <div class="kit-text sec-head">
+        <span class="pill eyebrow">O que vem em cada kit</span>
+        <h2>Cada folha é um <span class="hl">kit completo</span></h2>
+        <p class="sub">Você imprime, recorta e monta. Fica assim, pronto para usar, presentear ou vender.</p>
       </div>
-      <div class="flow">
-        <figure class="fstep">
-          <div class="fimg sheetimg"><img src="img/kit-3.webp" alt="Folha A4 com 3 marca-páginas e 1 base" width="900"
-              height="635" loading="lazy"></div>
-          <figcaption><b>Você imprime</b>uma folha A4 por kit</figcaption>
-        </figure>
-        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 60 24" fill="none" stroke="#D6527A" stroke-width="3"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 12h48M42 3l10 9-10 9" />
-          </svg></div>
-        <figure class="fstep">
-          <div class="fimg"><img src="img/montado-gatos.webp" alt="Kit montado: 3 marca-páginas sobre a base"
-              width="700" height="900" loading="lazy"></div>
-          <figcaption><b>E fica assim</b>3 marca-páginas na base combinando</figcaption>
-        </figure>
-      </div>
-      <ul class="feat feat3">
-        <li style="--fc:var(--pink)"><b>Encaixe perfeito e firme</b><span>Os 3 marca-páginas cabem certinho na base,
-            formando um kit lindo e organizado.</span></li>
-        <li style="--fc:#CBB9F0"><b>Pronto para imprimir</b><span>PDF em tamanho A4, já diagramado. Funciona em
-            impressora comum de casa.</span></li>
-        <li style="--fc:#A9DCC7"><b>Alta qualidade e artes incríveis!</b><span>Imagens em alta resolução, cores vivas e
-            arte dos dois lados.</span></li>
-      </ul>
+      <figure class="kit-img"><img src="img/kit-montado.webp"
+          alt="Kit montado: 3 marca-páginas de gatinhos sobre a base combinando" width="623" height="822"
+          loading="lazy"></figure>
+      <ol class="kit-list">
+        <li><span class="kn">3</span>
+          <div><b>marca-páginas</b><span>Arte frente e verso, com cores vivas e alta resolução.</span></div>
+        </li>
+        <li><span class="kn">1</span>
+          <div><b>base combinando</b><span>A cartela onde os 3 marca-páginas encaixam certinho.</span></div>
+        </li>
+        <li><span class="kn">A4</span>
+          <div><b>tudo em uma folha</b><span>PDF já diagramado. Funciona em impressora comum de casa.</span></div>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- ================= GALERIA ================= -->
   <section class="gallery">
     <div class="wrap">
-      <div class="center mx">
-        <span class="pill">Veja alguns modelos</span>
-        <h2>Tem kit para todos os gostos</h2>
-        <p class="sub">Religiosos, bichinhos fofos, frutas, flores e muito mais.</p>
+      <div class="sec-head">
+        <span class="pill eyebrow">Veja alguns modelos</span>
+        <h2>Confira o conteúdo <span class="hl">por dentro</span></h2>
+        <p class="sub">Algumas páginas do arquivo. Cada folha A4 é um kit completo, com 3 marca-páginas e a base
+          combinando.</p>
       </div>
-      <div class="shelf">
-        <figure>
-          <div class="card"><span class="tape" style="--tc:#F7B9C8"></span><img src="img/f-sagrado.webp"
-              alt="Marca-página Sagrado Coração" width="400" height="800" loading="lazy"></div>
-          <figcaption>Sagrado Coração</figcaption>
-        </figure>
-        <figure>
-          <div class="card"><span class="tape" style="--tc:#FFD978"></span><img src="img/f-raposa.webp"
-              alt="Marca-página raposinha" width="400" height="800" loading="lazy"></div>
-          <figcaption>Raposinha</figcaption>
-        </figure>
-        <figure>
-          <div class="card"><span class="tape" style="--tc:#A9DCC7"></span><img src="img/f-abacate.webp"
-              alt="Marca-página abacate" width="400" height="800" loading="lazy"></div>
-          <figcaption>Abacate fofo</figcaption>
-        </figure>
-        <figure>
-          <div class="card"><span class="tape" style="--tc:#CBB9F0"></span><img src="img/f-lhama.webp"
-              alt="Marca-página lhama" width="400" height="800" loading="lazy"></div>
-          <figcaption>Lhama</figcaption>
-        </figure>
-        <figure>
-          <div class="card"><span class="tape" style="--tc:#F7B9C8"></span><img src="img/f-abelha.webp"
-              alt="Marca-página abelhinha" width="400" height="800" loading="lazy"></div>
-          <figcaption>Abelhinha</figcaption>
-        </figure>
+      <div class="cf" id="cf" role="region" aria-roledescription="carrossel" aria-label="Páginas do arquivo"
+        oncontextmenu="return false">
+        <div class="cf-stage" tabindex="0" aria-live="polite">
+          <figure class="cf-slide" data-name="Lilo &amp; Stitch"><img src="img/pg-stitch.webp"
+              alt="Página do kit Lilo &amp; Stitch" width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Jesus e as crianças"><img src="img/pg-jesus.webp"
+              alt="Página do kit Jesus e as crianças" width="600" height="424" loading="lazy" draggable="false">
+          </figure>
+          <figure class="cf-slide" data-name="Snoopy"><img src="img/pg-snoopy.webp" alt="Página do kit Snoopy"
+              width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Nossa Senhora"><img src="img/pg-religioso.webp"
+              alt="Página do kit Nossa Senhora" width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Ursinho Pooh"><img src="img/pg-pooh.webp" alt="Página do kit Ursinho Pooh"
+              width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Hello Kitty"><img src="img/pg-hellokitty.webp"
+              alt="Página do kit Hello Kitty" width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Garfield"><img src="img/pg-garfield.webp" alt="Página do kit Garfield"
+              width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Marie"><img src="img/pg-marie.webp" alt="Página do kit Marie" width="600"
+              height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Bob Esponja"><img src="img/pg-bobesponja.webp"
+              alt="Página do kit Bob Esponja" width="600" height="424" loading="lazy" draggable="false"></figure>
+          <figure class="cf-slide" data-name="Tom &amp; Jerry"><img src="img/pg-tomjerry.webp"
+              alt="Página do kit Tom &amp; Jerry" width="600" height="424" loading="lazy" draggable="false"></figure>
+        </div>
+        <div class="cf-cap" aria-hidden="true"><span></span></div>
+        <div class="cf-nav">
+          <button class="cf-btn" type="button" data-dir="-1" aria-label="Página anterior"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 5l-7 7 7 7" />
+            </svg></button>
+          <div class="cf-dots"></div>
+          <button class="cf-btn" type="button" data-dir="1" aria-label="Próxima página"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5l7 7-7 7" />
+            </svg></button>
+        </div>
       </div>
-      <a href="#planos" class="more">E mais 97 modelos esperando por você</a>
+      <p class="sheets-note">Imagens de amostra em baixa resolução. O arquivo original vem em alta qualidade.</p>
     </div>
   </section>
 
-  <!-- ================= PARA QUEM ================= -->
-  <section>
+  <!-- ================= PARA QUEM É ================= -->
+  <section class="uses">
     <div class="wrap">
-      <div class="center mx">
-        <h2>Perfeito para papelaria personalizada, brindes, presentes, kits de leitura e muito mais!</h2>
+      <div class="sec-head">
+        <span class="pill eyebrow">Para quem é</span>
+        <h2>Para presentear <span class="hl">ou para vender</span></h2>
+        <p class="sub">Um kit, dois jeitos de usar. Ou os dois.</p>
       </div>
-      <div class="tags">
-        <span>Papelaria personalizada</span><span>Brindes</span><span>Presentes</span><span>Kits de leitura</span>
-        <span>Lembrancinhas</span><span>Catequese</span><span>Professoras</span><span>Clube do livro</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================= PARA VENDER ================= -->
-  <section class="sell">
-    <div class="wrap box">
-      <div class="trio" aria-hidden="true">
-        <div class="bm"><img src="img/f-cereja.webp" alt="" loading="lazy" width="400" height="800"></div>
-        <div class="bm"><span class="tape" style="--tc:#F7B9C8"></span><img src="img/f-jesus.webp" alt="" loading="lazy"
-            width="400" height="800"></div>
-        <div class="bm"><img src="img/f-cacto.webp" alt="" loading="lazy" width="400" height="800"></div>
-      </div>
-      <div>
-        <span class="pill">Para empreender</span>
-        <h2>Ideal para quem trabalha com papelaria e quer vender!</h2>
-        <ul class="checks">
-          <li>Compre uma vez e imprima quantas vezes quiser</li>
-          <li>Cada folha A4 vira um kit pronto para vender</li>
-          <li>Custo de produção baixo: papel, tinta e um pouco de capricho</li>
-          <li>102 modelos para agradar públicos diferentes, do infantil ao religioso</li>
-          <li>Vende o ano todo: volta às aulas, Páscoa, Dia das Mães, Natal</li>
-        </ul>
-        <a href="#planos" class="btn">Quero começar a vender</a>
+      <div class="book">
+        <div class="marks" aria-hidden="true">
+          <div class="mk" style="--cc:#C98A9E"><img src="img/f-cereja.webp" alt="" width="400" height="800"
+              loading="lazy"><span class="hole"></span><svg class="cord" viewBox="0 0 30 34" aria-hidden="true">
+              <path d="M5 32 C4 20 9 8 18 7 C25 6 27 12 26 17" fill="none" stroke="currentColor" stroke-width="1.3"
+                stroke-linecap="round" />
+              <path d="M24.6 18 L27.4 18 L28.2 26 Q26 27.2 23.8 26 Z" fill="currentColor" />
+            </svg></div>
+          <div class="mk" style="--cc:#C9A55A"><img src="img/f-abelha.webp" alt="" width="400" height="800"
+              loading="lazy"><span class="hole"></span><svg class="cord" viewBox="0 0 30 34" aria-hidden="true">
+              <path d="M5 32 C4 20 9 8 18 7 C25 6 27 12 26 17" fill="none" stroke="currentColor" stroke-width="1.3"
+                stroke-linecap="round" />
+              <path d="M24.6 18 L27.4 18 L28.2 26 Q26 27.2 23.8 26 Z" fill="currentColor" />
+            </svg></div>
+          <div class="mk" style="--cc:#7FA898"><img src="img/f-cacto.webp" alt="" width="400" height="800"
+              loading="lazy"><span class="hole"></span><svg class="cord" viewBox="0 0 30 34" aria-hidden="true">
+              <path d="M5 32 C4 20 9 8 18 7 C25 6 27 12 26 17" fill="none" stroke="currentColor" stroke-width="1.3"
+                stroke-linecap="round" />
+              <path d="M24.6 18 L27.4 18 L28.2 26 Q26 27.2 23.8 26 Z" fill="currentColor" />
+            </svg></div>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Como você quer usar o kit">
+          <button class="tab tab-gift" type="button" role="tab" id="tab-gift" aria-controls="pg-gift"
+            aria-selected="true" data-to="gift">Presentear</button>
+          <button class="tab tab-sell" type="button" role="tab" id="tab-sell" aria-controls="pg-sell"
+            aria-selected="false" data-to="sell">Vender</button>
+        </div>
+
+        <div class="page pg-gift" id="pg-gift" data-page="gift">
+          <h3>Para presentear</h3>
+          <p>Um mimo delicado que combina com qualquer ocasião.</p>
+          <div class="tags">
+            <span>Papelaria personalizada</span><span>Brindes</span><span>Presentes</span><span>Kits de leitura</span>
+            <span>Lembrancinhas</span><span>Catequese</span><span>Professoras</span><span>Clube do livro</span>
+          </div>
+          <p class="gift-tip"><b>Dica:</b> entregue os 3 marca-páginas encaixados na base. Já fica com cara de presente
+            embalado, sem gastar nada a mais.</p>
+          <button class="turn" type="button" data-to="sell">Para vender</button>
+        </div>
+
+        <div class="page pg-sell" id="pg-sell" data-page="sell">
+          <h3>Para vender</h3>
+          <p>Ideal para quem trabalha com papelaria e quer uma renda extra.</p>
+          <ul class="checks">
+            <li>Compre uma vez e imprima quantas vezes quiser</li>
+            <li>Cada folha A4 vira um kit pronto para vender</li>
+            <li>Custo de produção baixo: papel, tinta e um pouco de capricho</li>
+            <li>102 modelos para agradar públicos diferentes, do infantil ao religioso</li>
+            <li>Vende o ano todo: volta às aulas, Páscoa, Dia das Mães, Natal</li>
+          </ul>
+          <a href="#planos" class="btn">Quero começar a vender</a>
+          <button class="turn" type="button" data-to="gift">Voltar para presentear</button>
+        </div>
       </div>
     </div>
   </section>
@@ -1492,8 +2059,9 @@
   <!-- ================= COMO FUNCIONA ================= -->
   <section>
     <div class="wrap">
-      <div class="center mx">
-        <h2>Como funciona</h2>
+      <div class="sec-head">
+        <span class="pill eyebrow">Passo a passo</span>
+        <h2>Como <span class="hl">funciona</span></h2>
       </div>
       <div class="how">
         <div class="st">
@@ -1515,9 +2083,9 @@
   <!-- ================= BÔNUS ================= -->
   <section class="bonus-sec">
     <div class="wrap">
-      <div class="center mx">
-        <span class="pill">Presentes para você</span>
-        <h2>Bônus exclusivos</h2>
+      <div class="sec-head">
+        <span class="pill eyebrow">Presentes para você</span>
+        <h2>Bônus <span class="hl">exclusivos</span></h2>
       </div>
       <div class="bonus">
         <div class="bcard">
@@ -1553,9 +2121,9 @@
   <!-- ================= PLANOS ================= -->
   <section class="plans-sec" id="planos">
     <div class="wrap">
-      <div class="center mx">
-        <span class="pill">Escolha o seu</span>
-        <h2>Garanta seu Kit Trios de Marca-Páginas</h2>
+      <div class="sec-head">
+        <span class="pill eyebrow">Escolha o seu</span>
+        <h2>Garanta seu <span class="hl">Kit Trios</span> de Marca-Páginas</h2>
         <p class="sub">Pagamento único. Acesso imediato. Sem mensalidade.</p>
       </div>
       <div class="plans">
@@ -1563,7 +2131,7 @@
           <h3>Kit Básico</h3>
           <p class="qty"><b>36 marca-páginas</b> em 12 kits</p>
           <div class="price"><span class="cur">R$</span><span class="val">9,90</span></div>
-          <p class="unit">R$ 0,28 por marca-página</p>
+          <p class="unit">Pagamento único</p>
           <ul>
             <li>36 marca-páginas diferentes</li>
             <li>12 kits com 12 bases combinando</li>
@@ -1575,11 +2143,11 @@
           <a href="https://pay.wiapy.com/vk6HvYJKUb2X" class="btn soft full">Quero o Básico</a>
         </div>
         <div class="plan best">
-          <span class="badge">Melhor custo-benefício</span>
+          <span class="badge">Mais vendido</span>
           <h3>Kit Completo</h3>
           <p class="qty"><b>102 marca-páginas</b> em 34 kits</p>
           <div class="price"><span class="cur">R$</span><span class="val">19,90</span></div>
-          <p class="unit">Só R$ 0,17 por marca-página, com o bônus</p>
+          <p class="unit">Pagamento único</p>
           <ul>
             <li><b>Todos os 102 marca-páginas</b></li>
             <li>34 kits com 34 bases combinando</li>
@@ -1594,31 +2162,63 @@
         </div>
       </div>
       <div class="center">
-        <div class="trust" style="margin-top:26px"><span>Pix ou cartão</span><span>Acesso imediato</span><span>Garantia
+        <div class="trust plans-trust"><span>Pix ou cartão</span><span>Acesso imediato</span><span>Garantia
             de 7 dias</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ================= GARANTIA ================= -->
-  <section>
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section class="talk">
     <div class="wrap">
-      <div class="guar">
-        <div class="seal"><b>7</b><span>dias</span></div>
-        <div>
-          <h3 style="font-size:26px">Garantia incondicional de 7 dias</h3>
-          <p style="color:var(--soft);margin-top:8px">Se por qualquer motivo você não gostar do material, é só pedir o
-            reembolso dentro de 7 dias e devolvemos 100% do valor. Sem perguntas e sem burocracia.</p>
+      <div class="sec-head">
+        <span class="pill eyebrow">Depoimentos</span>
+        <h2>Quem comprou, <span class="hl">amou</span></h2>
+        <p class="sub">Mensagens que recebemos de clientes no WhatsApp.</p>
+      </div>
+
+      <div class="dp">
+        <div class="dp-track" tabindex="0" aria-label="Depoimentos de clientes">
+          <figure class="dp-item"><img src="img/dep-1.webp" alt="Depoimento de cliente no WhatsApp (1 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-2.webp" alt="Depoimento de cliente no WhatsApp (2 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-3.webp" alt="Depoimento de cliente no WhatsApp (3 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-4.webp" alt="Depoimento de cliente no WhatsApp (4 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-5.webp" alt="Depoimento de cliente no WhatsApp (5 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+        </div>
+        <div class="cf-nav">
+          <button class="cf-btn dp-prev" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 5l-7 7 7 7" />
+            </svg></button>
+          <div class="dp-dots"></div>
+          <button class="cf-btn dp-next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5l7 7-7 7" />
+            </svg></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= FAQ ================= -->
-  <section style="padding-top:10px">
+  <!-- ================= GARANTIA + FAQ ================= -->
+  <section>
     <div class="wrap">
-      <div class="center mx">
-        <h2>Perguntas frequentes</h2>
+      <div class="guar">
+        <div class="guar-head">
+          <div class="seal" aria-hidden="true"><b>7</b><span>dias</span></div>
+          <h3>Garantia incondicional de 7 dias</h3>
+        </div>
+        <p>Se por qualquer motivo você não gostar do material, é só pedir o reembolso dentro de 7 dias e devolvemos
+          100% do valor. Sem perguntas e sem burocracia.</p>
+      </div>
+      <div class="sec-head">
+        <span class="pill eyebrow">Dúvidas</span>
+        <h2>Perguntas <span class="hl">frequentes</span></h2>
       </div>
       <div class="faq">
         <details>
@@ -1669,7 +2269,7 @@
   <section class="final">
     <div class="wrap center mx">
       <h2>Encante cada leitura</h2>
-      <p class="sub" style="margin-bottom:28px">102 marca-páginas lindos, prontos para imprimir, por menos de R$ 20.</p>
+      <p class="sub" style="margin-bottom:22px">102 marca-páginas lindos, prontos para imprimir, por menos de R$ 20.</p>
       <a href="#planos" class="btn">Escolher meu kit</a>
       <div class="trust"><span>Acesso imediato</span><span>Garantia de 7 dias</span></div>
     </div>
@@ -1677,25 +2277,218 @@
 
   <footer>
     <div class="wrap">
-      <p><b>Kit Trios de Marca-Páginas</b> · Produto digital</p>
-      <!-- <p style="margin-top:6px">Dúvidas? Fale com a gente: TROQUE PELO SEU CONTATOseuemail@exemplo.com</p> -->
-      <p style="margin-top:6px">© Canto do Papel 2026 · Todos os direitos reservados</p>
+      <!-- <p>Dúvidas? Fale com a gente: TROQUE PELO SEU CONTATOseuemail@exemplo.com</p> -->
+      <p>© 2026 Canto do Papel · Kit Trios de Marca-Páginas · Produto digital</p>
     </div>
   </footer>
 
-  <div class="sticky" id="sticky">
-    <div class="p">A partir de<b>R$ 9,90</b></div>
-    <a href="#planos" class="btn">Ver planos</a>
-  </div>
-
   <script>
     (function () {
-      var s = document.getElementById('sticky'), plans = document.getElementById('planos'), hero = document.querySelector('.hero');
-      if (!('IntersectionObserver' in window)) return;
-      var heroVis = true, plansVis = false;
-      function upd() { s.classList.toggle('show', !heroVis && !plansVis) }
-      new IntersectionObserver(function (e) { heroVis = e[0].isIntersecting; upd() }).observe(hero);
-      new IntersectionObserver(function (e) { plansVis = e[0].isIntersecting; upd() }, { threshold: .15 }).observe(plans);
+      var root = document.getElementById('cf');
+      if (!root) return;
+      var stage = root.querySelector('.cf-stage'), slides = [].slice.call(root.querySelectorAll('.cf-slide'));
+      var cap = root.querySelector('.cf-cap span'), dotsBox = root.querySelector('.cf-dots');
+      var n = slides.length, cur = 0, timer = null, T = 4000, hover = false, inView = false;
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      root.style.setProperty('--cf-t', T + 'ms');
+      if (reduce) root.classList.add('static');
+
+      var dots = slides.map(function (sl, i) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'cf-dot'; b.innerHTML = '<i></i>';
+        b.setAttribute('aria-label', 'Ver página ' + (i + 1) + ': ' + sl.dataset.name);
+        b.addEventListener('click', function () { go(i, true) });
+        dotsBox.appendChild(b);
+        sl.addEventListener('click', function () { if (i !== cur) go(i, true) });
+        return b;
+      });
+
+      function render() {
+        var wide = window.innerWidth >= 800;
+        slides.forEach(function (sl, i) {
+          var d = i - cur;
+          if (d > n / 2) d -= n;
+          if (d < -n / 2) d += n;
+          var a = Math.abs(d), vis = a <= 2;
+          var x = d * (wide ? 72 : 60) - (a > 1 ? d / a * 22 : 0);
+          sl.style.transform = 'translateX(' + x + '%) translateZ(' + (-a * 120) + 'px) rotateY(' + (-d * 10) + 'deg) scale(' + (1 - a * .12) + ')';
+          sl.style.opacity = vis ? (a === 2 ? .35 : 1 - a * .22) : 0;
+          sl.style.filter = a ? 'saturate(.8)' : 'none';
+          sl.style.zIndex = 10 - a;
+          sl.style.pointerEvents = vis ? '' : 'none';
+          sl.classList.toggle('on', a === 0);
+          sl.setAttribute('aria-hidden', a === 0 ? 'false' : 'true');
+        });
+        dots.forEach(function (b, i) {
+          b.classList.remove('on');
+          if (i === cur) { void b.offsetWidth; b.classList.add('on'); b.setAttribute('aria-current', 'true') }
+          else b.removeAttribute('aria-current');
+        });
+        cap.classList.add('out');
+        setTimeout(function () { cap.textContent = slides[cur].dataset.name; cap.classList.remove('out') }, 180);
+      }
+
+      function go(i, user) { cur = (i + n) % n; render(); if (user) restart() }
+      function stop() { clearTimeout(timer); timer = null }
+      function play() {
+        stop();
+        if (reduce || hover || !inView || document.hidden) { root.classList.add('paused'); return }
+        root.classList.remove('paused');
+        timer = setTimeout(function () { go(cur + 1); play() }, T);
+      }
+      function restart() { play() }
+
+      root.querySelectorAll('.cf-btn').forEach(function (b) {
+        b.addEventListener('click', function () { go(cur + +b.dataset.dir, true) });
+      });
+      stage.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { go(cur + 1, true); e.preventDefault() }
+        if (e.key === 'ArrowLeft') { go(cur - 1, true); e.preventDefault() }
+      });
+
+      var x0 = null, moved = false;
+      stage.addEventListener('pointerdown', function (e) { x0 = e.clientX; moved = false });
+      stage.addEventListener('pointermove', function (e) { if (x0 !== null && Math.abs(e.clientX - x0) > 8) moved = true });
+      window.addEventListener('pointerup', function (e) {
+        if (x0 === null) return;
+        var dx = e.clientX - x0; x0 = null;
+        if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1), true);
+      });
+      stage.addEventListener('click', function (e) { if (moved) { e.stopPropagation(); e.preventDefault() } }, true);
+
+      root.addEventListener('mouseenter', function () { hover = true; play() });
+      root.addEventListener('mouseleave', function () { hover = false; play() });
+      root.addEventListener('focusin', function () { hover = true; play() });
+      root.addEventListener('focusout', function () { hover = false; play() });
+      document.addEventListener('visibilitychange', play);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (e) { inView = e[0].isIntersecting; play() }, { threshold: .35 }).observe(root);
+      } else { inView = true }
+      var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(render, 120) });
+
+      render(); play();
+    })();
+  </script>
+  <script>
+    (function () {
+      var book = document.querySelector('.book');
+      if (!book) return;
+      var mq = matchMedia('(max-width: 799px)');
+      var pages = { gift: book.querySelector('[data-page="gift"]'), sell: book.querySelector('[data-page="sell"]') };
+      var tabs = [].slice.call(book.querySelectorAll('.tab'));
+      var cur = 'gift', busy = false, T = 700;
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+      function setA11y(on) {
+        ['gift', 'sell'].forEach(function (k) {
+          var p = pages[k];
+          if (on) {
+            p.setAttribute('role', 'tabpanel');
+            p.setAttribute('aria-labelledby', 'tab-' + k);
+            if (k === cur) p.removeAttribute('inert'); else p.setAttribute('inert', '');
+          } else {
+            p.removeAttribute('role'); p.removeAttribute('aria-labelledby'); p.removeAttribute('inert');
+          }
+        });
+        tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.to === cur ? 'true' : 'false'); t.tabIndex = t.dataset.to === cur ? 0 : -1 });
+      }
+
+      function reset() {
+        busy = false;
+        ['gift', 'sell'].forEach(function (k) { pages[k].classList.remove('top', 'flipped', 'hide', 'noanim') });
+        if (mq.matches) pages[cur === 'gift' ? 'sell' : 'gift'].classList.add('hide');
+        setA11y(mq.matches);
+      }
+
+      function go(to) {
+        if (!mq.matches || busy || to === cur) return;
+        var from = pages[cur], next = pages[to], fwd = to === 'sell';
+        cur = to; setA11y(true);
+        if (reduce.matches) { reset(); return }
+        busy = true;
+        if (fwd) {
+          next.classList.remove('hide');
+          from.classList.add('top', 'flipped');
+        } else {
+          next.classList.add('noanim', 'flipped', 'top');
+          next.classList.remove('hide');
+          void next.offsetWidth;
+          next.classList.remove('noanim', 'flipped');
+        }
+        setTimeout(function () {
+          from.classList.remove('top', 'flipped');
+          from.classList.add('hide');
+          next.classList.remove('top');
+          busy = false;
+        }, T);
+        if (book.getBoundingClientRect().top < 0) book.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+      }
+
+      book.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-to]');
+        if (b) go(b.dataset.to);
+      });
+      book.querySelector('.tabs').addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          var t = cur === 'gift' ? 'sell' : 'gift'; go(t);
+          book.querySelector('#tab-' + t).focus(); e.preventDefault();
+        }
+      });
+
+      var x0 = null, y0 = 0;
+      book.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY }, { passive: true });
+      book.addEventListener('touchend', function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) go(dx < 0 ? 'sell' : 'gift');
+      }, { passive: true });
+
+      (mq.addEventListener ? mq.addEventListener('change', reset) : mq.addListener(reset));
+      reset();
+    })();
+  </script>
+  <script>
+    (function () {
+      var root = document.querySelector('.dp');
+      if (!root) return;
+      var track = root.querySelector('.dp-track'), items = [].slice.call(track.children), dotsBox = root.querySelector('.dp-dots');
+      var smooth = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      var prev = root.querySelector('.dp-prev'), next = root.querySelector('.dp-next'), last = -1;
+      var dots = items.map(function (it, i) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'dp-dot'; b.setAttribute('aria-label', 'Ver depoimento ' + (i + 1) + ' de ' + items.length);
+        b.addEventListener('click', function () { to(i) });
+        dotsBox.appendChild(b);
+        it.addEventListener('click', function () { if (i !== cur()) to(i) });
+        return b;
+      });
+      function cur() {
+        var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
+        items.forEach(function (it, i) { var d = Math.abs(it.offsetLeft + it.offsetWidth / 2 - mid); if (d < bd) { bd = d; best = i } });
+        return best;
+      }
+      function to(i) {
+        i = Math.max(0, Math.min(items.length - 1, i));
+        var it = items[i];
+        track.scrollTo({ left: it.offsetLeft + it.offsetWidth / 2 - track.clientWidth / 2, behavior: smooth });
+      }
+      function upd() {
+        var c = cur();
+        if (c === last) return;
+        last = c;
+        items.forEach(function (it, i) { it.classList.toggle('on', i === c) });
+        dots.forEach(function (d, i) { d.classList.toggle('on', i === c); if (i === c) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current') });
+        prev.disabled = c === 0; next.disabled = c === items.length - 1;
+      }
+      prev.addEventListener('click', function () { to(cur() - 1) });
+      next.addEventListener('click', function () { to(cur() + 1) });
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { to(cur() + 1); e.preventDefault() }
+        if (e.key === 'ArrowLeft') { to(cur() - 1); e.preventDefault() }
+      });
+      var raf = 0; track.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(function () { raf = 0; upd() }) }, { passive: true });
+      window.addEventListener('resize', function () { last = -1; upd() });
+      upd();
     })();
   </script>
 </body>
