@@ -1211,70 +1211,6 @@
       color: var(--soft)
     }
 
-    /* bônus */
-    .bonus-sec {
-      background: var(--butter)
-    }
-
-    .bonus {
-      display: grid;
-      gap: 20px;
-      margin-top: 30px
-    }
-
-    .bcard {
-      background: #fff;
-      border-radius: var(--r);
-      overflow: hidden;
-      box-shadow: 0 10px 26px rgba(140, 100, 20, .12)
-    }
-
-    .bcard .bimg {
-      padding: 16px;
-      background: var(--blush)
-    }
-
-    .bcard .bimg img {
-      border-radius: 12px
-    }
-
-    .bcard .btx {
-      padding: 20px 22px 24px
-    }
-
-    .blabel {
-      display: inline-block;
-      font-family: 'Fredoka';
-      font-weight: 500;
-      font-size: 14px;
-      padding: 5px 14px;
-      border-radius: 999px;
-      margin-bottom: 10px;
-      background: var(--rose);
-      color: #fff
-    }
-
-    .bcard p {
-      color: var(--soft);
-      font-size: 16px;
-      margin-top: 6px
-    }
-
-    .mini {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      padding: 6px 0
-    }
-
-    .mini img {
-      width: 27%;
-      object-fit: cover;
-      border-radius: 9px;
-      border: 4px solid #fff;
-      box-shadow: 0 6px 14px rgba(120, 60, 80, .15)
-    }
-
     /* planos */
     .plans-sec {
       background: var(--blush);
@@ -1401,6 +1337,221 @@
       font-size: 14px;
       color: var(--soft);
       margin-top: 12px
+    }
+
+    .bon-intro {
+      text-align: center;
+      font-family: 'Fredoka', system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--soft);
+      margin: 30px auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      max-width: 880px
+    }
+
+    .bon-intro:before,
+    .bon-intro:after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--pink);
+      opacity: .65
+    }
+
+    .plans-bon {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      gap: 26px
+    }
+
+    .bon-item {
+      position: relative;
+      background: #fff;
+      border: 2px dashed #C7B6EE;
+      border-radius: 22px;
+      padding: 22px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 8px 22px rgba(120, 60, 80, .08)
+    }
+
+    .bon-item.comp {
+      border-color: #E5C158
+    }
+
+    .bon-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--lilac-d);
+      color: #fff;
+      font-family: 'Fredoka', system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 1;
+      padding: 6px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(143, 120, 207, .28)
+    }
+
+    .bon-badge svg {
+      width: 14px;
+      height: 14px;
+      flex: none
+    }
+
+    .bon-item.comp .bon-badge {
+      background: #A4740A;
+      box-shadow: 0 4px 10px rgba(164, 116, 10, .28)
+    }
+
+    .bon-vis {
+      position: relative;
+      width: 100%;
+      height: 156px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      overflow: hidden
+    }
+
+    .bon-vis:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -20px;
+      width: 74px;
+      height: 15px;
+      transform: rotate(-34deg);
+      background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .45) 0 5px, rgba(255, 255, 255, 0) 5px 10px), rgba(143, 120, 207, .36);
+      pointer-events: none;
+      z-index: 3
+    }
+
+    .bon-vis.ora:before {
+      background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .45) 0 5px, rgba(255, 255, 255, 0) 5px 10px), rgba(214, 82, 122, .32)
+    }
+
+    .bon-vis.guia {
+      background-color: var(--lilac);
+      background-image: radial-gradient(rgba(255, 255, 255, .78) 1.8px, transparent 2.2px);
+      background-size: 16px 16px
+    }
+
+    .bon-vis.guia img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform .3s ease
+    }
+
+    .bon-vis.ora {
+      background-color: var(--butter);
+      background-image: radial-gradient(rgba(255, 255, 255, .78) 1.8px, transparent 2.2px);
+      background-size: 16px 16px;
+      gap: 10px
+    }
+
+    .bon-vis.ora img {
+      height: 122px;
+      width: auto;
+      aspect-ratio: 400 / 1024;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 3px solid #fff;
+      box-shadow: 0 5px 12px rgba(120, 60, 80, .14);
+      transition: transform .3s ease
+    }
+
+    .bon-vis.ora img:first-child {
+      transform: rotate(-5deg) translateY(2px)
+    }
+
+    .bon-vis.ora img:nth-child(2) {
+      z-index: 2;
+      transform: translateY(-1px)
+    }
+
+    .bon-vis.ora img:last-child {
+      transform: rotate(5deg) translateY(2px)
+    }
+
+    .bon-free {
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      z-index: 4;
+      background: #fff;
+      color: var(--rose);
+      font-family: 'Fredoka', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1.5px solid var(--pink);
+      box-shadow: 0 3px 8px rgba(120, 60, 80, .14);
+      transform: rotate(-6deg);
+      pointer-events: none
+    }
+
+    @media (hover: hover) {
+      .bon-item:hover .bon-vis.guia img {
+        transform: scale(1.03)
+      }
+
+      .bon-item:hover .bon-vis.ora img:first-child {
+        transform: rotate(-7deg) translateY(0)
+      }
+
+      .bon-item:hover .bon-vis.ora img:nth-child(2) {
+        transform: translateY(-4px)
+      }
+
+      .bon-item:hover .bon-vis.ora img:last-child {
+        transform: rotate(7deg) translateY(0)
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bon-vis img {
+        transition: none
+      }
+    }
+
+    .bon-tx {
+      padding: 0 6px
+    }
+
+    .bon-tx b {
+      display: block;
+      font-family: 'Fredoka', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--ink);
+      line-height: 1.2
+    }
+
+    .bon-tx span {
+      display: block;
+      font-size: 14px;
+      color: var(--soft);
+      line-height: 1.45;
+      margin-top: 3px
     }
 
     /* garantia */
@@ -1786,8 +1937,28 @@
         flex-direction: column
       }
 
-      .bonus {
-        grid-template-columns: 1fr 1fr
+      .plans-bon {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px
+      }
+
+      .bon-item {
+        padding: 24px 14px 18px;
+        gap: 12px
+      }
+
+      .bon-vis {
+        height: 172px;
+        padding: 10px 14px
+      }
+
+      .bon-vis.ora {
+        gap: 12px
+      }
+
+      .bon-vis.ora img {
+        height: 138px;
+        border-radius: 7px
       }
 
       .plan.best {
@@ -1911,32 +2082,7 @@
       </div>
     </div>
   </header>
-  <div class="scallop"></div>
-
-  <!-- ================= O QUE VEM ================= -->
-  <section>
-    <div class="wrap kit">
-      <div class="kit-text sec-head">
-        <span class="pill eyebrow">O que vem em cada kit</span>
-        <h2>Cada folha é um <span class="hl">kit completo</span></h2>
-        <p class="sub">Você imprime, recorta e monta. Fica assim, pronto para usar, presentear ou vender.</p>
-      </div>
-      <figure class="kit-img"><img src="img/kit-montado.webp"
-          alt="Kit montado: 3 marca-páginas de gatinhos sobre a base combinando" width="623" height="822"
-          loading="lazy"></figure>
-      <ol class="kit-list">
-        <li><span class="kn">3</span>
-          <div><b>marca-páginas</b><span>Arte frente e verso, com cores vivas e alta resolução.</span></div>
-        </li>
-        <li><span class="kn">1</span>
-          <div><b>base combinando</b><span>A cartela onde os 3 marca-páginas encaixam certinho.</span></div>
-        </li>
-        <li><span class="kn">A4</span>
-          <div><b>tudo em uma folha</b><span>PDF já diagramado. Funciona em impressora comum de casa.</span></div>
-        </li>
-      </ol>
-    </div>
-  </section>
+  <div class="scallop" style="--c:var(--lilac)"></div>
 
   <!-- ================= GALERIA ================= -->
   <section class="gallery">
@@ -2056,65 +2202,28 @@
     </div>
   </section>
 
-  <!-- ================= COMO FUNCIONA ================= -->
+  <!-- ================= O QUE VEM ================= -->
   <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="pill eyebrow">Passo a passo</span>
-        <h2>Como <span class="hl">funciona</span></h2>
+    <div class="wrap kit">
+      <div class="kit-text sec-head">
+        <span class="pill eyebrow">O que vem em cada kit</span>
+        <h2>Cada folha é um <span class="hl">kit completo</span></h2>
+        <p class="sub">Você imprime, recorta e monta. Fica assim, pronto para usar, presentear ou vender.</p>
       </div>
-      <div class="how">
-        <div class="st">
-          <div><b>Escolha seu plano</b><span>Pague no Pix ou no cartão, com compra 100% segura.</span></div>
-        </div>
-        <div class="st">
-          <div><b>Receba o acesso</b><span>O link chega no seu e-mail logo após a confirmação.</span></div>
-        </div>
-        <div class="st">
-          <div><b>Baixe o PDF</b><span>Arquivos organizados e prontos para imprimir.</span></div>
-        </div>
-        <div class="st">
-          <div><b>Imprima e monte</b><span>Corte, dobre e pronto. O guia ilustrado mostra cada passo.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= BÔNUS ================= -->
-  <section class="bonus-sec">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="pill eyebrow">Presentes para você</span>
-        <h2>Bônus <span class="hl">exclusivos</span></h2>
-      </div>
-      <div class="bonus">
-        <div class="bcard">
-          <div class="bimg">
-            <div class="mini"><img src="img/o-pai-nosso.webp" alt="Marca-página Pai Nosso" loading="lazy" width="400"
-                height="1024" style="aspect-ratio:400/1024;transform:rotate(-4deg)"><img src="img/o-ave-maria.webp"
-                alt="Marca-página Ave Maria" loading="lazy" width="400" height="1024" style="aspect-ratio:400/1024"><img
-                src="img/o-salmo23.webp" alt="Marca-página Salmo 23" loading="lazy" width="400" height="1024"
-                style="aspect-ratio:400/1024;transform:rotate(4deg)"></div>
-          </div>
-          <div class="btx">
-            <span class="blabel">Bônus 1 · só no Completo</span>
-            <h3>Kits de Oração: 4 kits extras</h3>
-            <p>12 marca-páginas com orações: Pai Nosso, Ave Maria, Salve Rainha, Salmo 23, Oração de São Francisco e
-              muito mais. Cada kit vem com uma base combinando. Fazem muito sucesso em paróquias e na catequese.</p>
-          </div>
-        </div>
-        <div class="bcard">
-          <div class="bimg" style="background:var(--lilac);display:flex;align-items:center;justify-content:center"><img
-              src="img/guia-mockup.webp" alt="Páginas do guia ilustrado de impressão" loading="lazy" width="874"
-              height="589"></div>
-          <div class="btx">
-            <span class="blabel" style="background:var(--lilac-d)">Bônus 2 · nos dois planos</span>
-            <h3>Guia ilustrado de impressão</h3>
-            <p>Um PDF de 7 páginas, todo ilustrado, que ensina qual papel usar, como configurar a impressora, onde
-              cortar e dobrar e como montar o kit na base. Ideal para quem nunca fez.</p>
-          </div>
-        </div>
-      </div>
+      <figure class="kit-img"><img src="img/kit-montado.webp"
+          alt="Kit montado: 3 marca-páginas de gatinhos sobre a base combinando" width="623" height="822"
+          loading="lazy"></figure>
+      <ol class="kit-list">
+        <li><span class="kn">3</span>
+          <div><b>marca-páginas</b><span>Arte frente e verso, com cores vivas e alta resolução.</span></div>
+        </li>
+        <li><span class="kn">1</span>
+          <div><b>base combinando</b><span>A cartela onde os 3 marca-páginas encaixam certinho.</span></div>
+        </li>
+        <li><span class="kn">A4</span>
+          <div><b>tudo em uma folha</b><span>PDF já diagramado. Funciona em impressora comum de casa.</span></div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -2136,7 +2245,7 @@
             <li>36 marca-páginas diferentes</li>
             <li>12 kits com 12 bases combinando</li>
             <li>PDF pronto para imprimir</li>
-            <li>Guia ilustrado de impressão</li>
+            <li><span><b>Bônus:</b> Guia ilustrado de impressão</span></li>
             <li>Imprima quantas vezes quiser</li>
           </ul>
           <!-- TROQUE PELO LINK DE CHECKOUT DO KIT BÁSICO NA WIAPY -->
@@ -2152,7 +2261,7 @@
             <li><b>Todos os 102 marca-páginas</b></li>
             <li>34 kits com 34 bases combinando</li>
             <li>PDF pronto para imprimir</li>
-            <li>Guia ilustrado de impressão</li>
+            <li><span><b>Bônus:</b> Guia ilustrado de impressão</span></li>
             <li>Imprima quantas vezes quiser</li>
             <li class="bon"><span><b>Bônus:</b> 4 Kits de Oração (12 marca-páginas + 4 bases)</span></li>
           </ul>
@@ -2161,9 +2270,73 @@
           <p class="note">Por R$ 10 a mais, você leva 66 modelos a mais + bônus</p>
         </div>
       </div>
+      <p class="bon-intro">Presentes inclusos sem custo extra</p>
+      <div class="plans-bon">
+        <div class="bon-item">
+          <span class="bon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="8" width="18" height="4" rx="1" />
+              <path d="M12 8v13" />
+              <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />
+              <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" />
+            </svg>Bônus · nos dois planos</span>
+          <div class="bon-vis guia">
+            <img src="img/guia-mockup.webp" alt="Páginas do guia ilustrado de impressão" loading="lazy" width="874"
+              height="589">
+            <span class="bon-free">Grátis</span>
+          </div>
+          <div class="bon-tx">
+            <b>Guia ilustrado de impressão</b>
+            <span>PDF de 7 páginas com papel ideal, configuração, corte e montagem.</span>
+          </div>
+        </div>
+        <div class="bon-item comp">
+          <span class="bon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="8" width="18" height="4" rx="1" />
+              <path d="M12 8v13" />
+              <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />
+              <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" />
+            </svg>Bônus · só no Completo</span>
+          <div class="bon-vis ora">
+            <img src="img/o-pai-nosso.webp" alt="Marca-página Pai Nosso" loading="lazy" width="400" height="1024">
+            <img src="img/o-ave-maria.webp" alt="Marca-página Ave Maria" loading="lazy" width="400" height="1024">
+            <img src="img/o-salmo23.webp" alt="Marca-página Salmo 23" loading="lazy" width="400" height="1024">
+            <span class="bon-free">Grátis</span>
+          </div>
+          <div class="bon-tx">
+            <b>4 Kits de Oração extras</b>
+            <span>12 marca-páginas (Pai Nosso, Ave Maria, Salmo 23 e mais) + 4 bases.</span>
+          </div>
+        </div>
+      </div>
       <div class="center">
         <div class="trust plans-trust"><span>Pix ou cartão</span><span>Acesso imediato</span><span>Garantia
             de 7 dias</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMO FUNCIONA ================= -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="pill eyebrow">Passo a passo</span>
+        <h2>Como <span class="hl">funciona</span></h2>
+      </div>
+      <div class="how">
+        <div class="st">
+          <div><b>Escolha seu plano</b><span>Pague no Pix ou no cartão, com compra 100% segura.</span></div>
+        </div>
+        <div class="st">
+          <div><b>Receba o acesso</b><span>O link chega no seu e-mail logo após a confirmação.</span></div>
+        </div>
+        <div class="st">
+          <div><b>Baixe o PDF</b><span>Arquivos organizados e prontos para imprimir.</span></div>
+        </div>
+        <div class="st">
+          <div><b>Imprima e monte</b><span>Corte, dobre e pronto. O guia ilustrado mostra cada passo.</span></div>
+        </div>
       </div>
     </div>
   </section>
