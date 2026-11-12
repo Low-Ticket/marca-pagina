@@ -354,7 +354,7 @@
 
     .fan {
       position: relative;
-      height: 310px;
+      height: 260px;
       max-width: 440px;
       margin: 6px auto 0
     }
@@ -456,33 +456,10 @@
     }
 
     .st1 {
-      top: -4px;
-      right: -8px
+      top: 0;
+      right: -6px
     }
 
-    .price-tag {
-      position: absolute;
-      left: -10px;
-      top: 6px;
-      background: #fff;
-      border-radius: 14px;
-      padding: 8px 14px;
-      font-family: 'Fredoka';
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--soft);
-      transform: rotate(-6deg);
-      box-shadow: 0 6px 16px rgba(120, 60, 80, .16);
-      z-index: 5;
-      line-height: 1.2
-    }
-
-    .price-tag b {
-      display: block;
-      font-weight: 600;
-      font-size: 24px;
-      color: var(--rose)
-    }
 
     /* o que vem */
     .anatomy {
@@ -514,86 +491,16 @@
       color: #fff
     }
 
-    /* o que vem em cada kit */
-    .kit {
-      display: grid;
-      gap: 26px;
-      align-items: center
-    }
 
-    .kit-text {
-      text-align: center
-    }
 
-    .kit-text .sub {
-      max-width: 480px;
-      margin: 0 auto
-    }
 
-    .kit .sec-head {
-      margin-bottom: 0
-    }
 
-    .kit-img {
-      background: #fff;
-      border-radius: var(--r);
-      overflow: hidden;
-      box-shadow: 0 14px 34px rgba(120, 60, 80, .12);
-      max-width: 320px;
-      width: 100%;
-      margin: 0 auto
-    }
 
-    .kit-img img {
-      display: block;
-      width: 100%;
-      height: auto
-    }
 
-    .kit-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      max-width: 480px;
-      width: 100%;
-      margin: 0 auto
-    }
 
-    .kit-list li {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: #fff;
-      border-radius: 18px;
-      padding: 14px 18px
-    }
 
-    .kn {
-      flex: none;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--blush);
-      color: var(--rose);
-      font-family: 'Fredoka';
-      font-weight: 600;
-      font-size: 26px
-    }
 
-    .kit-list b {
-      display: block;
-      font-family: 'Fredoka';
-      font-weight: 600;
-      font-size: 20px;
-      color: var(--ink)
-    }
 
-    .kit-list span:not(.kn) {
-      font-size: 16px;
-      color: var(--soft)
-    }
 
     /* galeria */
     /* carrossel de páginas (coverflow) */
@@ -792,376 +699,44 @@
       background: var(--lilac)
     }
 
-    /* para quem é: livro aberto (presentear | vender) */
-    .uses {
-      background: var(--mint)
-    }
 
-    .book {
-      position: relative;
-      max-width: 1000px;
-      margin: 110px auto 0;
-      display: grid
-    }
 
-    .marks {
-      position: absolute;
-      z-index: 0;
-      top: -70px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      align-items: flex-start
-    }
 
-    .mk {
-      position: relative;
-      width: 50px;
-      aspect-ratio: 2/5;
-      transition: transform .45s cubic-bezier(.3, 1.4, .5, 1);
-      transform-origin: 50% 100%
-    }
 
-    .mk:nth-child(2) {
-      margin-top: -18px
-    }
 
-    .mk:nth-child(3) {
-      margin-top: 10px
-    }
 
-    .mk img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      border-radius: 6px 6px 0 0;
-      background: #fff;
-      box-shadow: 0 -4px 14px rgba(40, 90, 70, .16)
-    }
 
-    .mk .hole {
-      position: absolute;
-      top: 11px;
-      left: 50%;
-      width: 9px;
-      height: 9px;
-      margin-left: -4.5px;
-      border-radius: 50%;
-      background: var(--mint);
-      box-shadow: inset 0 1.5px 2px rgba(40, 60, 50, .35), 0 0 0 2px rgba(255, 255, 255, .9)
-    }
 
-    .mk .cord {
-      position: absolute;
-      left: 50%;
-      bottom: calc(100% - 16px);
-      width: 30px;
-      height: 34px;
-      margin-left: -5px;
-      overflow: visible;
-      color: var(--cc, var(--rose));
-      opacity: .55;
-      pointer-events: none
-    }
 
-    .book:hover .mk:nth-child(1) {
-      transform: translateY(-8px) rotate(-3deg)
-    }
 
-    .book:hover .mk:nth-child(2) {
-      transform: translateY(-12px)
-    }
 
-    .book:hover .mk:nth-child(3) {
-      transform: translateY(-6px) rotate(3deg)
-    }
 
-    .page {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 36px 24px 38px;
-      background: #FFFDFB;
-      box-shadow: 0 3px 0 -1px #F3E9EC, 0 6px 0 -2px #EADCE2, 0 22px 40px rgba(40, 90, 70, .14)
-    }
 
-    .pg-gift {
-      border-radius: 24px 24px 6px 6px;
-      background: linear-gradient(to bottom, #FFFDFB 80%, #F6ECEF)
-    }
 
-    .pg-sell {
-      border-radius: 6px 6px 24px 24px;
-      background: linear-gradient(to top, #FFFDFB 80%, #F6ECEF);
-      border-top: 1px solid #EEDFE5
-    }
 
-    .page h3 {
-      font-size: clamp(26px, 5vw, 32px);
-      color: var(--ink);
-      margin-bottom: 6px
-    }
 
-    .page>p {
-      color: var(--soft);
-      font-size: 17px;
-      max-width: 42ch
-    }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px
-    }
 
-    .tags span {
-      font-family: 'Fredoka';
-      font-weight: 500;
-      font-size: 15px;
-      padding: 7px 14px;
-      border-radius: 999px
-    }
 
-    .tags span:nth-child(4n+1) {
-      background: var(--blush);
-      color: var(--rose-d)
-    }
 
-    .tags span:nth-child(4n+2) {
-      background: var(--lilac);
-      color: #6F58B5
-    }
 
-    .tags span:nth-child(4n+3) {
-      background: var(--mint);
-      color: #3D7E66
-    }
 
-    .tags span:nth-child(4n+4) {
-      background: var(--butter);
-      color: #8E6A0F
-    }
 
-    .gift-tip {
-      margin-top: auto;
-      max-width: 400px;
-      background: var(--butter);
-      color: #6E5410;
-      font-size: 16px;
-      line-height: 1.5;
-      padding: 16px 20px;
-      border-radius: 4px 16px 16px 16px;
-      transform: rotate(-1.2deg);
-      box-shadow: 0 6px 14px rgba(185, 138, 22, .12)
-    }
 
-    .gift-tip b {
-      font-family: 'Fredoka';
-      font-weight: 600
-    }
 
-    .pg-gift .tags {
-      margin-bottom: 28px
-    }
 
-    .checks {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      margin: 22px 0 28px
-    }
 
-    .checks li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      font-size: 17px
-    }
 
-    .checks li:before {
-      content: "";
-      flex: 0 0 24px;
-      height: 24px;
-      border-radius: 50%;
-      margin-top: 2px;
-      background: var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234E9C80' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/15px no-repeat
-    }
 
-    .tabs,
-    .turn {
-      display: none
-    }
 
     /* celular: uma página por vez, fitas viram abas */
     @media (max-width: 799px) {
-      .marks {
-        display: none
-      }
 
-      .book {
-        margin-top: 70px;
-        perspective: 1600px
-      }
 
-      .page {
-        grid-area: 1 / 1;
-        padding: 34px 24px 84px 30px;
-        border-radius: 6px 22px 22px 6px;
-        border-top: 0;
-        background: linear-gradient(to right, #EFE1E7, #FFFDFB 26px);
-        box-shadow: 3px 0 0 -1px #F3E9EC, 6px 0 0 -2px #EADCE2, 0 22px 40px rgba(40, 90, 70, .14);
-        transform-origin: left center;
-        backface-visibility: hidden;
-        transition: transform .7s cubic-bezier(.45, .05, .25, 1), opacity .7s ease
-      }
 
-      .page.top {
-        z-index: 3
-      }
 
-      .page.flipped {
-        transform: rotateY(-82deg);
-        opacity: 0
-      }
 
-      .page.hide {
-        visibility: hidden
-      }
 
-      .page.noanim {
-        transition: none
-      }
-
-      .tabs {
-        position: absolute;
-        z-index: 0;
-        top: -50px;
-        left: 34px;
-        display: flex;
-        gap: 8px
-      }
-
-      .tab {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        width: 116px;
-        height: 76px;
-        padding: 13px 0 0;
-        line-height: 1.2;
-        border: 0;
-        border-radius: 10px 10px 0 0;
-        font-family: 'Fredoka';
-        font-weight: 600;
-        font-size: 16px;
-        color: #fff;
-        cursor: pointer;
-        outline: 1.5px dashed rgba(255, 255, 255, .55);
-        outline-offset: -6px;
-        transform: translateY(14px);
-        opacity: .6;
-        transition: transform .4s cubic-bezier(.3, 1.4, .5, 1), opacity .3s ease;
-        -webkit-tap-highlight-color: transparent
-      }
-
-      .tab-gift {
-        background: var(--rose)
-      }
-
-      .tab-sell {
-        background: var(--mint-d)
-      }
-
-      .tab[aria-selected="true"] {
-        transform: none;
-        opacity: 1
-      }
-
-      .tab:active {
-        transform: translateY(4px)
-      }
-
-      .tab[aria-selected="true"]:active {
-        transform: translateY(-8px)
-      }
-
-      @media (hover: hover) {
-        .tab:hover {
-          transform: translateY(4px);
-          opacity: .85
-        }
-
-        .tab[aria-selected="true"]:hover {
-          transform: translateY(-8px);
-          opacity: 1
-        }
-      }
-
-      .tab:focus-visible {
-        outline: 3px solid var(--ink);
-        outline-offset: 2px
-      }
-
-      .gift-tip {
-        margin-top: 0
-      }
-
-      .turn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        min-height: 58px;
-        padding: 0 62px 0 20px;
-        border: 0;
-        background: none;
-        font-family: 'Fredoka';
-        font-weight: 600;
-        font-size: 16px;
-        color: var(--rose);
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent
-      }
-
-      .turn::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 46px;
-        height: 46px;
-        border-radius: 0 0 22px 0;
-        background: linear-gradient(315deg, var(--mint) 0 50%, #EAD9DF 50% 56%, #F6ECEF 56%);
-        box-shadow: -3px -3px 8px rgba(120, 60, 80, .08);
-        transition: width .3s ease, height .3s ease
-      }
-
-      .turn:active::after {
-        width: 58px;
-        height: 58px
-      }
-
-      .turn:focus-visible {
-        outline: 3px solid var(--pink);
-        outline-offset: -4px;
-        border-radius: 12px
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-      .mk,
-      .page,
-      .tab {
-        transition: none !important
-      }
     }
 
     /* como funciona */
@@ -1234,7 +809,6 @@
     }
 
     .plan.best {
-      order: -1;
       border: 3px solid var(--rose);
       box-shadow: 0 16px 36px rgba(214, 82, 122, .22)
     }
@@ -1288,6 +862,54 @@
     }
 
     .best .price {
+      color: var(--rose)
+    }
+
+    .old {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--soft)
+    }
+
+    .old s {
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none
+    }
+
+    /* risco diagonal fino: mostra que foi cortado sem esconder os números */
+    .old s::after {
+      content: '';
+      position: absolute;
+      left: -3px;
+      right: -3px;
+      top: 52%;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--rose);
+      transform: rotate(-10deg)
+    }
+
+    .old+.price {
+      margin-top: 2px
+    }
+
+    .inst {
+      display: table;
+      margin: 8px auto 10px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--blush);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink)
+    }
+
+    .inst b {
       color: var(--rose)
     }
 
@@ -1614,17 +1236,23 @@
 
     /* depoimentos */
     .talk {
-      background: var(--lilac)
+      background: var(--mint)
     }
 
     .dp {
-      --dw: min(76vw, 300px)
+      --dw: min(72vw, 300px)
+    }
+
+    .dp .cf-nav {
+      margin-top: 4px
     }
 
     .dp-track {
+      position: relative;
       display: flex;
-      gap: 18px;
+      gap: 14px;
       overflow-x: auto;
+      overscroll-behavior-x: contain;
       scroll-snap-type: x mandatory;
       padding: 8px calc(50% + 20px - var(--dw) / 2) 28px;
       margin: 0 -20px;
@@ -1647,13 +1275,14 @@
     .dp-item {
       flex: 0 0 var(--dw);
       scroll-snap-align: center;
+      scroll-snap-stop: always;
       border-radius: 22px;
       overflow: hidden;
       background: #fff;
       border: 5px solid #fff;
       box-shadow: 0 14px 30px rgba(90, 60, 140, .14);
-      transform: scale(.9);
-      opacity: .5;
+      transform: scale(.88);
+      opacity: .45;
       cursor: pointer;
       transition: transform .45s cubic-bezier(.22, .8, .24, 1), opacity .45s ease
     }
@@ -1829,13 +1458,6 @@
         max-width: 680px
       }
 
-      .price-tag {
-        left: 0;
-        top: 10px;
-        font-size: 16px;
-        padding: 10px 18px
-      }
-
       .st1 {
         right: 0;
         top: 0
@@ -1856,70 +1478,17 @@
         max-width: 600px
       }
 
-      .kit {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "img text" "img list";
-        column-gap: 64px;
-        row-gap: 24px;
-        max-width: 960px;
-        margin: 0 auto
-      }
 
-      .kit-img {
-        grid-area: img;
-        max-width: 440px
-      }
 
-      .kit-text {
-        grid-area: text;
-        text-align: left;
-        align-self: end
-      }
 
-      .kit-text .sub {
-        margin: 0
-      }
 
-      .kit-list {
-        grid-area: list;
-        align-self: start;
-        margin: 0
-      }
 
-      .book {
-        grid-template-columns: 1fr 1fr;
-        margin-top: 156px
-      }
 
-      .marks {
-        top: -104px;
-        gap: 14px
-      }
 
-      .mk {
-        width: 58px
-      }
 
-      .page {
-        padding: 50px 52px 54px
-      }
 
-      .tags span {
-        font-size: 17px;
-        padding: 9px 18px
-      }
 
-      .pg-gift {
-        border-radius: 26px 4px 4px 26px;
-        background: linear-gradient(to right, #FFFDFB 78%, #F3E6EB)
-      }
 
-      .pg-sell {
-        border-radius: 4px 26px 26px 4px;
-        background: linear-gradient(to left, #FFFDFB 78%, #F3E6EB);
-        border-top: 0;
-        border-left: 1px solid #EADBE1
-      }
 
       footer {
         padding: 18px 0
@@ -1959,10 +1528,6 @@
       .bon-vis.ora img {
         height: 138px;
         border-radius: 7px
-      }
-
-      .plan.best {
-        order: 0
       }
 
       .plans {
@@ -2025,20 +1590,41 @@
     }
 
     @media(min-width:1100px) {
-      .hero .price-tag {
-        left: -27%;
-        top: 110px;
-        font-size: 17px;
-        padding: 12px 20px
+      /* depoimentos lado a lado: texto à esquerda, carrossel à direita (cabe em uma tela) */
+      .talk {
+        padding: 64px 0
       }
 
-      .hero .price-tag b {
-        font-size: 28px
+      .talk .wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+        align-items: center;
+        gap: 40px
+      }
+
+      .talk .sec-head {
+        text-align: left;
+        margin: 0
+      }
+
+      .talk .sec-head .sub {
+        margin-left: 0
+      }
+
+      .dp {
+        --dw: 290px
+      }
+
+      .dp-track {
+        gap: 20px;
+        padding-bottom: 18px;
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%, #000 78%, transparent);
+        mask-image: linear-gradient(90deg, transparent, #000 22%, #000 78%, transparent)
       }
 
       .hero .st1 {
-        right: -24%;
-        top: 70px;
+        right: -7%;
+        top: -6px;
         transform: scale(1.15) rotate(-10deg)
       }
     }
@@ -2047,7 +1633,16 @@
 
 <body>
 
-  <div class="topbar">Arquivo digital com acesso imediato após o pagamento</div>
+  <div class="topbar">50% de desconto até <span id="promo-date">amanhã</span></div>
+  <script>
+    (function () {
+      var d = new Date();
+      d.setDate(d.getDate() + 1);
+      var dd = String(d.getDate()).padStart(2, '0');
+      var mm = String(d.getMonth() + 1).padStart(2, '0');
+      document.getElementById('promo-date').textContent = dd + '/' + mm;
+    })();
+  </script>
 
   <!-- ================= HERO ================= -->
   <header class="hero">
@@ -2060,7 +1655,6 @@
 
       <div class="hero-art">
         <div class="fan" aria-hidden="true">
-          <div class="price-tag">a partir de<b>R$ 9,90</b></div>
           <div class="sticker st1"><b>102</b><span>modelos</span></div>
           <div class="bm b1"><img src="img/d-garfield.webp" alt="" width="400" height="800" fetchpriority="high"></div>
           <div class="bm b2"><img src="img/d-snoopy.webp" alt="" width="400" height="800" fetchpriority="high"></div>
@@ -2135,95 +1729,64 @@
     </div>
   </section>
 
-  <!-- ================= PARA QUEM É ================= -->
-  <section class="uses">
+  <!-- ================= COMO FUNCIONA ================= -->
+  <section>
     <div class="wrap">
       <div class="sec-head">
-        <span class="pill eyebrow">Para quem é</span>
-        <h2>Para presentear <span class="hl">ou para vender</span></h2>
-        <p class="sub">Um kit, dois jeitos de usar. Ou os dois.</p>
+        <span class="pill eyebrow">Passo a passo</span>
+        <h2>Como <span class="hl">funciona</span></h2>
       </div>
-
-      <div class="book">
-        <div class="marks" aria-hidden="true">
-          <div class="mk" style="--cc:#C98A9E"><img src="img/f-cereja.webp" alt="" width="400" height="800"
-              loading="lazy"><span class="hole"></span><svg class="cord" viewBox="0 0 30 34" aria-hidden="true">
-              <path d="M5 32 C4 20 9 8 18 7 C25 6 27 12 26 17" fill="none" stroke="currentColor" stroke-width="1.3"
-                stroke-linecap="round" />
-              <path d="M24.6 18 L27.4 18 L28.2 26 Q26 27.2 23.8 26 Z" fill="currentColor" />
-            </svg></div>
-          <div class="mk" style="--cc:#C9A55A"><img src="img/f-abelha.webp" alt="" width="400" height="800"
-              loading="lazy"><span class="hole"></span><svg class="cord" viewBox="0 0 30 34" aria-hidden="true">
-              <path d="M5 32 C4 20 9 8 18 7 C25 6 27 12 26 17" fill="none" stroke="currentColor" stroke-width="1.3"
-                stroke-linecap="round" />
-              <path d="M24.6 18 L27.4 18 L28.2 26 Q26 27.2 23.8 26 Z" fill="currentColor" />
-            </svg></div>
-          <div class="mk" style="--cc:#7FA898"><img src="img/f-cacto.webp" alt="" width="400" height="800"
-              loading="lazy"><span class="hole"></span><svg class="cord" viewBox="0 0 30 34" aria-hidden="true">
-              <path d="M5 32 C4 20 9 8 18 7 C25 6 27 12 26 17" fill="none" stroke="currentColor" stroke-width="1.3"
-                stroke-linecap="round" />
-              <path d="M24.6 18 L27.4 18 L28.2 26 Q26 27.2 23.8 26 Z" fill="currentColor" />
-            </svg></div>
+      <div class="how">
+        <div class="st">
+          <div><b>Escolha seu plano</b><span>Pague no Pix ou no cartão, com compra 100% segura.</span></div>
         </div>
-
-        <div class="tabs" role="tablist" aria-label="Como você quer usar o kit">
-          <button class="tab tab-gift" type="button" role="tab" id="tab-gift" aria-controls="pg-gift"
-            aria-selected="true" data-to="gift">Presentear</button>
-          <button class="tab tab-sell" type="button" role="tab" id="tab-sell" aria-controls="pg-sell"
-            aria-selected="false" data-to="sell">Vender</button>
+        <div class="st">
+          <div><b>Receba o acesso</b><span>O link chega no seu e-mail logo após a confirmação.</span></div>
         </div>
-
-        <div class="page pg-gift" id="pg-gift" data-page="gift">
-          <h3>Para presentear</h3>
-          <p>Um mimo delicado que combina com qualquer ocasião.</p>
-          <div class="tags">
-            <span>Papelaria personalizada</span><span>Brindes</span><span>Presentes</span><span>Kits de leitura</span>
-            <span>Lembrancinhas</span><span>Catequese</span><span>Professoras</span><span>Clube do livro</span>
-          </div>
-          <p class="gift-tip"><b>Dica:</b> entregue os 3 marca-páginas encaixados na base. Já fica com cara de presente
-            embalado, sem gastar nada a mais.</p>
-          <button class="turn" type="button" data-to="sell">Para vender</button>
+        <div class="st">
+          <div><b>Baixe o PDF</b><span>Arquivos organizados e prontos para imprimir.</span></div>
         </div>
-
-        <div class="page pg-sell" id="pg-sell" data-page="sell">
-          <h3>Para vender</h3>
-          <p>Ideal para quem trabalha com papelaria e quer uma renda extra.</p>
-          <ul class="checks">
-            <li>Compre uma vez e imprima quantas vezes quiser</li>
-            <li>Cada folha A4 vira um kit pronto para vender</li>
-            <li>Custo de produção baixo: papel, tinta e um pouco de capricho</li>
-            <li>102 modelos para agradar públicos diferentes, do infantil ao religioso</li>
-            <li>Vende o ano todo: volta às aulas, Páscoa, Dia das Mães, Natal</li>
-          </ul>
-          <a href="#planos" class="btn">Quero começar a vender</a>
-          <button class="turn" type="button" data-to="gift">Voltar para presentear</button>
+        <div class="st">
+          <div><b>Imprima e monte</b><span>Corte, dobre e pronto. O guia ilustrado mostra cada passo.</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= O QUE VEM ================= -->
-  <section>
-    <div class="wrap kit">
-      <div class="kit-text sec-head">
-        <span class="pill eyebrow">O que vem em cada kit</span>
-        <h2>Cada folha é um <span class="hl">kit completo</span></h2>
-        <p class="sub">Você imprime, recorta e monta. Fica assim, pronto para usar, presentear ou vender.</p>
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section class="talk">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="pill eyebrow">Depoimentos</span>
+        <h2>Quem comprou, <span class="hl">amou</span></h2>
+        <p class="sub">Mensagens que recebemos de clientes no WhatsApp.</p>
       </div>
-      <figure class="kit-img"><img src="img/kit-montado.webp"
-          alt="Kit montado: 3 marca-páginas de gatinhos sobre a base combinando" width="623" height="822"
-          loading="lazy"></figure>
-      <ol class="kit-list">
-        <li><span class="kn">3</span>
-          <div><b>marca-páginas</b><span>Arte frente e verso, com cores vivas e alta resolução.</span></div>
-        </li>
-        <li><span class="kn">1</span>
-          <div><b>base combinando</b><span>A cartela onde os 3 marca-páginas encaixam certinho.</span></div>
-        </li>
-        <li><span class="kn">A4</span>
-          <div><b>tudo em uma folha</b><span>PDF já diagramado. Funciona em impressora comum de casa.</span></div>
-        </li>
-      </ol>
+
+      <div class="dp">
+        <div class="dp-track" tabindex="0" aria-label="Depoimentos de clientes">
+          <figure class="dp-item"><img src="img/dep-1.jpg" alt="Depoimento de cliente no WhatsApp (1 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-2.jpg" alt="Depoimento de cliente no WhatsApp (2 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-3.jpg" alt="Depoimento de cliente no WhatsApp (3 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-4.jpg" alt="Depoimento de cliente no WhatsApp (4 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+          <figure class="dp-item"><img src="img/dep-5.jpg" alt="Depoimento de cliente no WhatsApp (5 de 5)" width="600"
+              height="1125" loading="lazy"></figure>
+        </div>
+        <div class="cf-nav">
+          <button class="cf-btn dp-prev" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 5l-7 7 7 7" />
+            </svg></button>
+          <div class="dp-dots"></div>
+          <button class="cf-btn dp-next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5l7 7-7 7" />
+            </svg></button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -2239,7 +1802,9 @@
         <div class="plan">
           <h3>Kit Básico</h3>
           <p class="qty"><b>36 marca-páginas</b> em 12 kits</p>
+          <p class="old">de <s>R$ 19,80</s> por</p>
           <div class="price"><span class="cur">R$</span><span class="val">9,90</span></div>
+          <p class="inst">ou <b>2x de R$ 5,25</b></p>
           <p class="unit">Pagamento único</p>
           <ul>
             <li>36 marca-páginas diferentes</li>
@@ -2255,7 +1820,9 @@
           <span class="badge">Mais vendido</span>
           <h3>Kit Completo</h3>
           <p class="qty"><b>102 marca-páginas</b> em 34 kits</p>
+          <p class="old">de <s>R$ 39,80</s> por</p>
           <div class="price"><span class="cur">R$</span><span class="val">19,90</span></div>
+          <p class="inst">ou <b>4x de R$ 5,60</b></p>
           <p class="unit">Pagamento único</p>
           <ul>
             <li><b>Todos os 102 marca-páginas</b></li>
@@ -2313,67 +1880,6 @@
       <div class="center">
         <div class="trust plans-trust"><span>Pix ou cartão</span><span>Acesso imediato</span><span>Garantia
             de 7 dias</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= COMO FUNCIONA ================= -->
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="pill eyebrow">Passo a passo</span>
-        <h2>Como <span class="hl">funciona</span></h2>
-      </div>
-      <div class="how">
-        <div class="st">
-          <div><b>Escolha seu plano</b><span>Pague no Pix ou no cartão, com compra 100% segura.</span></div>
-        </div>
-        <div class="st">
-          <div><b>Receba o acesso</b><span>O link chega no seu e-mail logo após a confirmação.</span></div>
-        </div>
-        <div class="st">
-          <div><b>Baixe o PDF</b><span>Arquivos organizados e prontos para imprimir.</span></div>
-        </div>
-        <div class="st">
-          <div><b>Imprima e monte</b><span>Corte, dobre e pronto. O guia ilustrado mostra cada passo.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= DEPOIMENTOS ================= -->
-  <section class="talk">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="pill eyebrow">Depoimentos</span>
-        <h2>Quem comprou, <span class="hl">amou</span></h2>
-        <p class="sub">Mensagens que recebemos de clientes no WhatsApp.</p>
-      </div>
-
-      <div class="dp">
-        <div class="dp-track" tabindex="0" aria-label="Depoimentos de clientes">
-          <figure class="dp-item"><img src="img/dep-1.webp" alt="Depoimento de cliente no WhatsApp (1 de 5)" width="600"
-              height="1125" loading="lazy"></figure>
-          <figure class="dp-item"><img src="img/dep-2.webp" alt="Depoimento de cliente no WhatsApp (2 de 5)" width="600"
-              height="1125" loading="lazy"></figure>
-          <figure class="dp-item"><img src="img/dep-3.webp" alt="Depoimento de cliente no WhatsApp (3 de 5)" width="600"
-              height="1125" loading="lazy"></figure>
-          <figure class="dp-item"><img src="img/dep-4.webp" alt="Depoimento de cliente no WhatsApp (4 de 5)" width="600"
-              height="1125" loading="lazy"></figure>
-          <figure class="dp-item"><img src="img/dep-5.webp" alt="Depoimento de cliente no WhatsApp (5 de 5)" width="600"
-              height="1125" loading="lazy"></figure>
-        </div>
-        <div class="cf-nav">
-          <button class="cf-btn dp-prev" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15 5l-7 7 7 7" />
-            </svg></button>
-          <div class="dp-dots"></div>
-          <button class="cf-btn dp-next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 5l7 7-7 7" />
-            </svg></button>
-        </div>
       </div>
     </div>
   </section>
@@ -2544,124 +2050,66 @@
   </script>
   <script>
     (function () {
-      var book = document.querySelector('.book');
-      if (!book) return;
-      var mq = matchMedia('(max-width: 799px)');
-      var pages = { gift: book.querySelector('[data-page="gift"]'), sell: book.querySelector('[data-page="sell"]') };
-      var tabs = [].slice.call(book.querySelectorAll('.tab'));
-      var cur = 'gift', busy = false, T = 700;
-      var reduce = matchMedia('(prefers-reduced-motion: reduce)');
-
-      function setA11y(on) {
-        ['gift', 'sell'].forEach(function (k) {
-          var p = pages[k];
-          if (on) {
-            p.setAttribute('role', 'tabpanel');
-            p.setAttribute('aria-labelledby', 'tab-' + k);
-            if (k === cur) p.removeAttribute('inert'); else p.setAttribute('inert', '');
-          } else {
-            p.removeAttribute('role'); p.removeAttribute('aria-labelledby'); p.removeAttribute('inert');
-          }
-        });
-        tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.to === cur ? 'true' : 'false'); t.tabIndex = t.dataset.to === cur ? 0 : -1 });
-      }
-
-      function reset() {
-        busy = false;
-        ['gift', 'sell'].forEach(function (k) { pages[k].classList.remove('top', 'flipped', 'hide', 'noanim') });
-        if (mq.matches) pages[cur === 'gift' ? 'sell' : 'gift'].classList.add('hide');
-        setA11y(mq.matches);
-      }
-
-      function go(to) {
-        if (!mq.matches || busy || to === cur) return;
-        var from = pages[cur], next = pages[to], fwd = to === 'sell';
-        cur = to; setA11y(true);
-        if (reduce.matches) { reset(); return }
-        busy = true;
-        if (fwd) {
-          next.classList.remove('hide');
-          from.classList.add('top', 'flipped');
-        } else {
-          next.classList.add('noanim', 'flipped', 'top');
-          next.classList.remove('hide');
-          void next.offsetWidth;
-          next.classList.remove('noanim', 'flipped');
-        }
-        setTimeout(function () {
-          from.classList.remove('top', 'flipped');
-          from.classList.add('hide');
-          next.classList.remove('top');
-          busy = false;
-        }, T);
-        if (book.getBoundingClientRect().top < 0) book.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
-      }
-
-      book.addEventListener('click', function (e) {
-        var b = e.target.closest('[data-to]');
-        if (b) go(b.dataset.to);
-      });
-      book.querySelector('.tabs').addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          var t = cur === 'gift' ? 'sell' : 'gift'; go(t);
-          book.querySelector('#tab-' + t).focus(); e.preventDefault();
-        }
-      });
-
-      var x0 = null, y0 = 0;
-      book.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY }, { passive: true });
-      book.addEventListener('touchend', function (e) {
-        if (x0 === null) return;
-        var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
-        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) go(dx < 0 ? 'sell' : 'gift');
-      }, { passive: true });
-
-      (mq.addEventListener ? mq.addEventListener('change', reset) : mq.addListener(reset));
-      reset();
-    })();
-  </script>
-  <script>
-    (function () {
       var root = document.querySelector('.dp');
       if (!root) return;
       var track = root.querySelector('.dp-track'), items = [].slice.call(track.children), dotsBox = root.querySelector('.dp-dots');
+      var prev = root.querySelector('.dp-prev'), next = root.querySelector('.dp-next');
       var smooth = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-      var prev = root.querySelector('.dp-prev'), next = root.querySelector('.dp-next'), last = -1;
+      var idx = 0, target = null, endTimer = 0;
+
+      // carrega todas as fotos logo (são poucas) para o carrossel não "pular" ao rolar
+      items.forEach(function (it) { var im = it.querySelector('img'); if (im) im.loading = 'eager' });
+
       var dots = items.map(function (it, i) {
         var b = document.createElement('button');
         b.type = 'button'; b.className = 'dp-dot'; b.setAttribute('aria-label', 'Ver depoimento ' + (i + 1) + ' de ' + items.length);
         b.addEventListener('click', function () { to(i) });
         dotsBox.appendChild(b);
-        it.addEventListener('click', function () { if (i !== cur()) to(i) });
+        it.addEventListener('click', function () { if (i !== idx) to(i) });
         return b;
       });
-      function cur() {
-        var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
-        items.forEach(function (it, i) { var d = Math.abs(it.offsetLeft + it.offsetWidth / 2 - mid); if (d < bd) { bd = d; best = i } });
+
+      // posição de rolagem que deixa o card i exatamente no centro (medida relativa ao próprio carrossel)
+      function pos(i) {
+        var t = track.getBoundingClientRect(), r = items[i].getBoundingClientRect();
+        return track.scrollLeft + (r.left + r.width / 2) - (t.left + t.width / 2);
+      }
+      function nearest() {
+        var best = 0, bd = Infinity;
+        items.forEach(function (_, i) { var d = Math.abs(pos(i) - track.scrollLeft); if (d < bd) { bd = d; best = i } });
         return best;
       }
-      function to(i) {
-        i = Math.max(0, Math.min(items.length - 1, i));
-        var it = items[i];
-        track.scrollTo({ left: it.offsetLeft + it.offsetWidth / 2 - track.clientWidth / 2, behavior: smooth });
-      }
-      function upd() {
-        var c = cur();
-        if (c === last) return;
-        last = c;
+      function paint(c) {
+        idx = c;
         items.forEach(function (it, i) { it.classList.toggle('on', i === c) });
         dots.forEach(function (d, i) { d.classList.toggle('on', i === c); if (i === c) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current') });
         prev.disabled = c === 0; next.disabled = c === items.length - 1;
       }
-      prev.addEventListener('click', function () { to(cur() - 1) });
-      next.addEventListener('click', function () { to(cur() + 1) });
+      function to(i) {
+        i = Math.max(0, Math.min(items.length - 1, i));
+        target = i; paint(i);
+        track.scrollTo({ left: pos(i), behavior: smooth });
+      }
+
+      prev.addEventListener('click', function () { to(idx - 1) });
+      next.addEventListener('click', function () { to(idx + 1) });
       track.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowRight') { to(cur() + 1); e.preventDefault() }
-        if (e.key === 'ArrowLeft') { to(cur() - 1); e.preventDefault() }
+        if (e.key === 'ArrowRight') { to(idx + 1); e.preventDefault() }
+        if (e.key === 'ArrowLeft') { to(idx - 1); e.preventDefault() }
       });
-      var raf = 0; track.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(function () { raf = 0; upd() }) }, { passive: true });
-      window.addEventListener('resize', function () { last = -1; upd() });
-      upd();
+
+      function settle() { target = null; paint(nearest()) }
+      var raf = 0;
+      track.addEventListener('scroll', function () {
+        // durante navegação por botão/bolinha, mantém o destino; no arrasto, acompanha o card mais central
+        if (target === null && !raf) raf = requestAnimationFrame(function () { raf = 0; paint(nearest()) });
+        clearTimeout(endTimer); endTimer = setTimeout(settle, 140);
+      }, { passive: true });
+      if ('onscrollend' in window) track.addEventListener('scrollend', function () { clearTimeout(endTimer); settle() });
+
+      window.addEventListener('resize', function () { track.scrollTo({ left: pos(idx), behavior: 'auto' }) });
+      paint(0);
+      track.scrollLeft = pos(0);
     })();
   </script>
 </body>
